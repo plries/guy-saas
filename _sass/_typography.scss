@@ -1,0 +1,21 @@
+:root {
+    font-size: 10px;
+}
+
+html {
+    font-size: 62.25%;
+}
+
+h1, h2, h3 {
+    color: $grey-900;
+    font-family: $serif;
+}
+
+p, a {
+    color: $grey-700;
+    font-family: $sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
