@@ -5,6 +5,10 @@
 @import "_typography";
 @import "_nav";
 
+@import "_main";
+
+
 html {
+    scroll-behavior: smooth;
     background-color: $grey-100;
 }

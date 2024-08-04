@@ -49,14 +49,8 @@ const updateStyle = (entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add('visible');
-			if (sections[3].classList.contains('visible')) {
-				vid.play();
-			}
 		} else {
 			entry.target.classList.remove('visible');
-			if (!sections[3].classList.contains('visible')) {
-				vid.pause();
-			}
 		}
 	});
 	
@@ -78,10 +72,22 @@ const updateMarker = (target) => {
 
 	link = link || headerLinks[0]
 
-	const distanceFromLeft = link.getBoundingClientRect().left
+	let distanceFromLeft = link.offsetLeft;
 
 	header.style.setProperty('--markerWidth', `${link.offsetWidth}px`)
 	header.style.setProperty('--markerLeft', `${distanceFromLeft}px`)
+
+	link.style.color = "#000000";
+	
+	headerLinks.forEach((e) => {
+
+			if (e !== link) {
+				e.style.color = "#919191";
+			}
+
+	})
+
+
 }
 
 // Run the observer, verify the scroll direction, update the entry when conditions pass

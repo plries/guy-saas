@@ -1,3 +1,8 @@
+:root {
+    --markerWidth: 0;
+    --markerLeft: 0;
+}
+
 .header_container {
     z-index: 2;
     position: fixed;
@@ -11,6 +16,9 @@
         border-radius: 16px;
         transition: color 200ms;
         background-color: $white;
+        -webkit-box-shadow: 0px 0px 23px 1px #91919180;
+        -moz-box-shadow: 0px 0px 23px 1px #91919180;
+        box-shadow: 0px 0px 23px 1px #91919180;
         nav {
             display: flex;
             align-items: center;
@@ -24,31 +32,55 @@
                 margin: 0;
                 gap: 3.2rem;
                 list-style: none;
+                li {
+                    a {
+                        color: $grey-500;
+                        transition: color 0.25s ease;
+                    }
+                    a:hover {
+                        color: $grey-700;
+                    }
+                }
             }
             .header_logo {
                 a {
-                    color: $black;
+                    color: $grey-500;
                     font-family: $serif;
-                    font-weight: 400;
-                    font-size: 3.2rem;
+                    font-size: 2.8rem;
+                    transition: color 0.25s ease;
+                }
+                /* active state indicator in the nav  */
+                a::after {
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    height: 0.4rem;
+                    width: 0.4rem;
+                    background-color: $grey-700;
+                    border-radius: 0.4rem;
+                    margin-top: 0.2rem;
+                    transform: translateX(calc(var(--markerLeft) + var(--markerWidth)  / 2 - 0.2rem));
+                    transition: transform ease 0.25s;
+                    will-change: width;
+                    animation: dotAppear ease 0.5s;
+                }
+                @media (min-width: 40em) {
+                    a::after {
+                        display: block;
+                    }
+                }
+
+                @keyframes dotAppear {
+                    from {
+                        opacity: 0;
+                    } to {
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
-    /* active state indicator in the nav  */
-    header::after {
-        display: none;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: var(--markerWidth, 0);
-        height: 0.4rem;
-        background-color: $violet;
-        transform: translate3d(var(--markerLeft, 0), 0, 0);
-        transition: transform steps(12) 250ms,
-                    width steps(12) 200ms,
-                    background-color steps(12) 200ms;
-        will-change: width;
-    }
+
 }
+

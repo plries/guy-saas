@@ -313,14 +313,33 @@ template {
   display: none;
 }
 
-html {
-  min-height: 100vh;
-}
-
 section {
   min-height: 100vh;
 }
 
+section:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+
+.col-12-4 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  padding: 3.6rem;
+}
+
+.s1-lg {
+  grid-column: 1/13;
+}
+
+@media screen and (max-width: 768px) {
+  .col-12-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .s1-md {
+    grid-column: 1/5;
+  }
+}
 :root {
   font-size: 10px;
 }
@@ -330,8 +349,8 @@ html {
 }
 
 h1, h2, h3 {
-  color: #111111;
-  font-family: "DM Serif Display", Cochin, Georgia, Times, serif;
+  color: #525252;
+  font-family: "Lora", Cochin, Georgia, Times, serif;
 }
 
 p, a {
@@ -343,13 +362,17 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --markerWidth: 0;
+  --markerLeft: 0;
+}
+
 .header_container {
   z-index: 2;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
-  /* active state indicator in the nav  */
 }
 .header_container header {
   padding: 2.4rem 3.2rem;
@@ -358,6 +381,7 @@ a {
   border-radius: 16px;
   transition: color 200ms;
   background-color: #ffffff;
+  box-shadow: 0px 0px 23px 1px rgba(145, 145, 145, 0.5019607843);
 }
 .header_container header nav {
   display: flex;
@@ -374,26 +398,81 @@ a {
   gap: 3.2rem;
   list-style: none;
 }
-.header_container header nav .header_logo a {
-  color: #000000;
-  font-family: "DM Serif Display", Cochin, Georgia, Times, serif;
-  font-weight: 400;
-  font-size: 3.2rem;
+.header_container header nav ul li a {
+  color: #919191;
+  transition: color 0.25s ease;
 }
-.header_container header::after {
+.header_container header nav ul li a:hover {
+  color: #525252;
+}
+.header_container header nav .header_logo {
+  /* active state indicator in the nav  */
+}
+.header_container header nav .header_logo a {
+  color: #919191;
+  font-family: "Lora", Cochin, Georgia, Times, serif;
+  font-size: 2.8rem;
+  transition: color 0.25s ease;
+}
+.header_container header nav .header_logo a::after {
   display: none;
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
-  width: var(--markerWidth, 0);
   height: 0.4rem;
-  background-color: #9062ca;
-  transform: translate3d(var(--markerLeft, 0), 0, 0);
-  transition: transform steps(12) 250ms, width steps(12) 200ms, background-color steps(12) 200ms;
+  width: 0.4rem;
+  background-color: #525252;
+  border-radius: 0.4rem;
+  margin-top: 0.2rem;
+  transform: translateX(calc(var(--markerLeft) + var(--markerWidth) / 2 - 0.2rem));
+  transition: transform ease 0.25s;
   will-change: width;
+  animation: dotAppear ease 0.5s;
+}
+@media (min-width: 40em) {
+  .header_container header nav .header_logo a::after {
+    display: block;
+  }
+}
+@keyframes dotAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
+figure {
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+figure img {
+  border-radius: 3.2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.notif {
+  position: absolute;
+  bottom: 0;
+  margin: 24px;
+  animation: fadeIn ease 1s;
+  filter: drop-shadow(0px 0px 23px 1px #919191);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 html {
+  scroll-behavior: smooth;
   background-color: #f1f1f1;
 }/*# sourceMappingURL=style.css.map */
