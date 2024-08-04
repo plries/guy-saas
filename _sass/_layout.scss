@@ -6,24 +6,24 @@ section:nth-child(2n) {
     background-color: $grey-100;
 }
 
-.col-12-4 {
+.col_12_4 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1.6rem;
     padding: 3.6rem;
 }
 
-.s1-lg {
+.s1_lg {
     grid-column: 1 / 13;
 }
 
 @media screen and (max-width: 768px) {
     
-    .col-12-4 {
+    .col_12_4 {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .s1-md {
+    .s1_md {
         grid-column: 1 / 5;
     }
 
