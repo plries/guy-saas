@@ -1,47 +1,51 @@
-figure {
+section {
+    min-height: 100vh;
+}
+
+.friends_img {
+    background-image: url('../media/friends.jpg');
+    background-position: center;
+    background-size: cover;
     margin: 0;
-    display: grid;
-    place-items: center;
-    img {
-        border-radius: 32px;
-        overflow: hidden;
-        width: 100%;
-    }
-}
-
-.notif_container {
-    position: absolute;
+    border-radius: 32px;
+    height: calc(100vh - 7.2rem);
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin: 24px;
-    bottom: 0;
-    .notif,
-    .notif1 {
-        -webkit-filter: drop-shadow(0px 0px 23px 1px #919191);
-        filter: drop-shadow(0px 0px 23px 1px #919191);
-        background-color: #ffffff4d;
-        border-radius: 30px;
-        border: 0.25px $grey-100 solid;
-        backdrop-filter: blur(10px);
-        animation: fadeIn 1s ease;
-    }
-    .notif1 {
-        animation: fadeIn 1s ease 0.25s;
+    align-items: flex-end;
+    .notif_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 24px;
+        .notif {
+            background-color: #ffffff99;
+            border-radius: 30px;
+            border: 0.25px $grey-100 solid;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease;
+            visibility: hidden;
+        }
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        visibility: hidden;
+.visible {
+    .friends_img {
+        .notif_container {
+            .notif {
+                visibility: visible;
+                animation: fadeUp 1s ease;
+            }
+        }
     }
-    1% {
+}
+
+@keyframes fadeUp {
+    from {
         opacity: 0;
         transform: translateY(50px);
-        visibility: visible;
     }
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(0);
     }
 }

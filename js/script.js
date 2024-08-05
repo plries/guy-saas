@@ -53,7 +53,18 @@ const updateStyle = (entries) => {
 			entry.target.classList.remove('visible');
 		}
 	});
+}
+
+// play GSAP animation when in view
+const playAnimation = (entries) => {
 	
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			notif.play();
+		} else {
+			notif.pause();
+		}
+	});
 }
 
 // Update the nav marker by:
