@@ -1,5 +1,5 @@
 section {
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 section:nth-child(2n + 1) {
@@ -17,6 +17,19 @@ section:nth-child(2n + 1) {
     }
 }
 
+.visible#section2 {
+    .about {
+        div {
+            div,
+            img {
+                visibility: visible;
+                animation: fadeUp 1s ease;
+            }
+        }
+    }
+}
+
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -25,13 +38,6 @@ section:nth-child(2n + 1) {
     to {
         opacity: 1;
         transform: translate(0);
-    }
-}
-
-
-.visible#section2 {
-    svg {
-        animation: logoRotate 1.5s ease;
     }
 }
 
@@ -65,8 +71,7 @@ section:nth-child(2n + 1) {
     }
     .notif_container {
         position: absolute;
-        display: flex;
-        flex-direction: column;
+        right: 32px;
         gap: 16px;
         margin: 24px;
         .notif {
@@ -82,25 +87,29 @@ section:nth-child(2n + 1) {
 
 .about {
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
+    grid-template-columns: 1.25fr 0.75fr;
     gap: 1.8rem;
     height: calc(100vh - 7.2rem);
     .about_col_1 {
-        display: grid;
-        grid-template-rows: 1fr 0.5fr;
-        gap: 1.8rem;
-        div {
-            background-color: $grey-100;
-            border-radius: 32px;
-            padding: 2.4rem;
-        }
-        svg {
-            width: 100%;
+        img:first-child {
             height: 100%;
-            path {
-                transition: all 0.25s ease;
-                width: 100%;
-                fill: $grey-100;
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+            border-radius: 32px;
+        }
+        .notif_container {
+            position: absolute;
+            translate: 0 -136px;
+            gap: 16px;
+            margin: 24px;
+            .notif {
+                background-color: #ffffff99;
+                border-radius: 30px;
+                border: 0.25px $grey-100 solid;
+                backdrop-filter: blur(10px);
+                animation: fadeIn 1s ease;
+                visibility: hidden;
             }
         }
     }
@@ -109,12 +118,17 @@ section:nth-child(2n + 1) {
         grid-template-rows: 0.5fr 1.5fr;
         gap: 1.8rem;
         div {
+            visibility: hidden;
             background-color: $grey-100;
             border-radius: 32px;
             padding: 2.4rem;
             display: grid;
-            place-items: center;
+        }
+        div:first-child {
+            place-items: center center;
+        }
+        div:last-child {
+            place-items: center left;
         }
     }
-    
 }
