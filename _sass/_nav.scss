@@ -59,14 +59,6 @@
                         display: block;
                     }
                 }
-
-                @keyframes dotAppear {
-                    from {
-                        opacity: 0;
-                    } to {
-                        opacity: 1;
-                    }
-                }
             }
             .header_list {
                 display: flex;
@@ -93,29 +85,16 @@
             align-items: center;
             gap: 1.6rem;
             margin-top: 0.8rem;
-            svg {
-                path {
-                    transition: fill 0.25s ease;
-                }
-            }
-            svg:hover {
-                path {
-                    fill: $grey-700;
-                }
-            }
             button {
                 padding: 0;
                 margin: 0;
                 border: unset;
                 background-color: unset;
             }
-            button:hover {
-                cursor: pointer;
-                svg {
-                    path {
-                        fill: $grey-700;
-                    }
-                }
+            ion-icon {
+                color: $grey-500;
+                font-size: 2rem;
+                animation: fadeIn 0.75s ease;
             }
         }
     }
