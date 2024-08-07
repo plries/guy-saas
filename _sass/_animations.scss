@@ -47,3 +47,57 @@
         transform: translateX(0px);
     }
 }
+
+.visible#section1 {
+    .hero {
+        .notif_container {
+            .notif {
+                visibility: visible;
+                animation: fadeUp 1s ease;
+            }
+        }
+        .hero_row_2 {
+            visibility: visible;
+            animation: slideRight 1s ease;
+        }
+    }
+}
+
+.visible#section2 {
+    .about {
+        .notif_container {
+            .notif {
+                visibility: visible;
+                animation: fadeUp 1s ease;
+            }
+        }
+        .about_content {
+            visibility: visible;
+            animation: slideLeft 1s ease;
+        }
+    }
+}
+
+.visible#section3 {
+    .pricing {
+        .cards_container {
+            .card {
+                visibility: visible;
+                animation: slideRight 1s ease;
+            }
+        }
+    }
+}
+
+.visible#section4 {
+    .faq {
+        > div {
+            visibility: visible;
+            animation: slideLeft 1s ease;
+        }
+    }
+    .cta {
+        visibility: visible;
+        animation: slideRight 1s ease;
+    }
+}

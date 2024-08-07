@@ -316,7 +316,7 @@ template {
 .col_12_4 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.8rem;
+  gap: 3.6rem;
   padding: 3.6rem;
   overflow-x: hidden;
 }
@@ -402,6 +402,23 @@ strong {
   font-weight: 600;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2 {
+    font-size: 4.4rem;
+  }
+  h3 {
+    font-size: 3.2rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p, a, input, ul, li, button {
+    font-size: 1.6rem;
+  }
+}
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -448,6 +465,38 @@ strong {
     transform: translateX(0px);
   }
 }
+.visible#section1 .hero .notif_container .notif {
+  visibility: visible;
+  animation: fadeUp 1s ease;
+}
+.visible#section1 .hero .hero_row_2 {
+  visibility: visible;
+  animation: slideRight 1s ease;
+}
+
+.visible#section2 .about .notif_container .notif {
+  visibility: visible;
+  animation: fadeUp 1s ease;
+}
+.visible#section2 .about .about_content {
+  visibility: visible;
+  animation: slideLeft 1s ease;
+}
+
+.visible#section3 .pricing .cards_container .card {
+  visibility: visible;
+  animation: slideRight 1s ease;
+}
+
+.visible#section4 .faq > div {
+  visibility: visible;
+  animation: slideLeft 1s ease;
+}
+.visible#section4 .cta {
+  visibility: visible;
+  animation: slideRight 1s ease;
+}
+
 :root {
   --markerWidth: 0;
   --markerLeft: 0;
@@ -473,7 +522,7 @@ strong {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  gap: 4.8rem;
+  gap: 3.6rem;
 }
 .header_container header nav {
   display: flex;
@@ -526,6 +575,9 @@ strong {
 .header_container header nav .header_list li a:hover {
   color: #525252;
 }
+.header_container header nav ion-icon {
+  display: none;
+}
 .header_container header .social_icons {
   display: flex;
   flex-direction: row;
@@ -546,48 +598,39 @@ strong {
   animation: fadeIn 0.75s ease;
 }
 
+@media screen and (max-width: 768px) {
+  .header_container header {
+    gap: 2.4rem;
+  }
+  .header_container header nav .header_list {
+    display: none;
+  }
+  .header_container header nav ion-icon {
+    margin-top: 0.8rem;
+    display: block;
+    color: #919191;
+    font-size: 2rem;
+  }
+  .header_container header .social_icons a {
+    display: none;
+  }
+}
 section:nth-child(2n+1) {
   background-color: #ffffff;
 }
 
-.visible#section1 .hero .notif_container .notif {
-  visibility: visible;
-  animation: fadeUp 1s ease;
-}
-.visible#section1 .hero .hero_row_2 {
-  visibility: visible;
-  animation: slideRight 1s ease;
-}
-
-.visible#section2 .about .notif_container .notif {
-  visibility: visible;
-  animation: fadeUp 1s ease;
-}
-.visible#section2 .about .about_content {
-  visibility: visible;
-  animation: slideLeft 1s ease;
-}
-
-.visible#section3 .pricing .cards_container .card {
-  visibility: visible;
-  animation: slideRight 1s ease;
-}
-
-.visible#section4 .faq > div {
-  visibility: visible;
-  animation: slideLeft 1s ease;
+#section1 {
+  min-height: calc(100vh - 7.2rem);
 }
 
 .hero {
   margin: 0;
-  height: calc(100vh - 7.2rem);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 1.5fr;
   gap: 3.6rem;
 }
 .hero .hero_row_1 {
-  height: calc(70vh - 7.2rem);
+  height: calc(71vh - 7.2rem);
 }
 .hero .hero_row_1 video {
   height: 100%;
@@ -595,15 +638,15 @@ section:nth-child(2n+1) {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 32px;
-  -o-object-position: bottom;
-     object-position: bottom;
+  -o-object-position: center;
+     object-position: center;
 }
 .hero .hero_row_1 .notif_container {
   position: absolute;
-  right: 36px;
+  left: 3.6rem;
   gap: 16px;
-  margin: 24px;
-  translate: 0 -124px;
+  margin: 2.4rem;
+  translate: 0 -12.4rem;
 }
 .hero .hero_row_1 .notif_container .notif {
   background-color: rgba(255, 255, 255, 0.6);
@@ -616,16 +659,17 @@ section:nth-child(2n+1) {
   visibility: hidden;
 }
 .hero .hero_row_2 {
+  height: 100%;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 3.6rem;
-  height: calc(30vh - 7.2rem);
 }
 .hero .hero_row_2 div {
+  max-height: 340px;
   place-content: center;
   background-color: #ffffff;
   border-radius: 32px;
-  padding: 3rem 4rem;
+  padding: 4rem;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .hero .hero_row_2 div h1 {
@@ -640,24 +684,27 @@ section:nth-child(2n+1) {
   gap: 1.6rem;
 }
 .hero .hero_row_2 div label fieldset {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
   border: 0;
   padding: 0;
+  margin: 0;
 }
 .hero .hero_row_2 div label fieldset input {
-  width: 100%;
-  border-radius: 0.8rem;
-  border: #919191 solid 1px;
+  border-radius: 0.8rem 0 0 0.8rem;
+  border: #525252 solid 1px;
   padding: 1.6rem;
-  flex-grow: 1;
+  width: 100%;
 }
 .hero .hero_row_2 div label fieldset input[value=submit] {
-  background-color: #111111;
-  border-color: #000000;
-  color: #f1f1f1;
+  background-color: #525252;
+  border-color: #525252;
+  color: #ffffff;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+.hero .hero_row_2 div label fieldset input[value=submit]:hover {
+  cursor: pointer;
 }
 
 .about {
@@ -676,10 +723,9 @@ section:nth-child(2n+1) {
 }
 .about .notif_container {
   position: absolute;
-  top: calc(200vh - 158px);
   gap: 16px;
-  right: 36px;
-  margin: 24px;
+  right: 3.6rem;
+  margin: 2.4rem;
 }
 .about .notif_container .notif {
   background-color: rgba(255, 255, 255, 0.6);
@@ -694,28 +740,26 @@ section:nth-child(2n+1) {
 .about .about_content {
   visibility: hidden;
   position: absolute;
-  margin: 24px;
-  left: 36px;
-  width: 25%;
+  margin: 2.4rem;
+  left: 3.6rem;
+  width: 50%;
   background-color: #ffffff;
   border-radius: 32px;
-  padding: 3rem 4rem;
+  padding: 4rem;
   display: grid;
+  align-self: end;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 
 .pricing {
-  height: calc(100vh - 7.2rem);
-}
-.pricing h2 {
-  margin-bottom: 8rem;
+  min-height: calc(100vh - 7.2rem);
 }
 .pricing .cards_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.6rem;
-  height: 90%;
-  margin: -32px;
+  height: 80%;
+  width: 100%;
 }
 .pricing .cards_container .card {
   visibility: hidden;
@@ -724,7 +768,7 @@ section:nth-child(2n+1) {
   justify-content: space-between;
   background-color: #ffffff;
   border-radius: 32px;
-  padding: 3rem 4rem;
+  padding: 4rem;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .pricing .cards_container .card .card_title {
@@ -761,12 +805,11 @@ section:nth-child(2n+1) {
   border: #919191 solid 1px;
   color: #000000;
 }
-.pricing .cards_container > div:first-child {
-  margin-left: 32px;
+.pricing .cards_container .card button:hover {
+  cursor: pointer;
 }
 .pricing .cards_container > div:nth-child(3) {
   border: #919191 2px solid;
-  margin-right: 32px;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .pricing .cards_container > div:nth-child(3) button {
@@ -781,29 +824,37 @@ section:nth-child(2n+1) {
   display: none;
 }
 
-.faq {
-  display: grid;
+section#section4 {
   height: calc(100vh - 7.2rem);
+  display: grid;
 }
-.faq h2 {
-  margin-bottom: 4rem;
-}
+
 .faq > div {
+  visibility: hidden;
+  height: 70%;
   display: grid;
   place-items: center;
+  width: 100%;
+  margin: 4.8rem 0;
+}
+.faq > div > div {
   height: -moz-fit-content;
   height: fit-content;
-}
-.faq > div .faq-item {
-  max-height: 5.8rem;
+  border-radius: 32px;
   overflow: hidden;
-  transition: max-height 1s ease;
+  box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
+}
+.faq > div > div .faq-item {
+  max-height: 6.6rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
   width: 100%;
 }
-.faq > div .faq-item button {
+.faq > div > div .faq-item button {
+  text-align: left;
   border: 0;
-  border-bottom: #919191 2px solid;
-  padding: 1.6rem;
+  border-bottom: #c6c6c6 2px solid;
+  padding: 2rem;
   width: 100%;
   color: #000000;
   font-weight: 600;
@@ -811,20 +862,105 @@ section:nth-child(2n+1) {
   display: flex;
   justify-content: space-between;
 }
-.faq > div .faq-item button ion-icon {
+.faq > div > div .faq-item button ion-icon {
   color: #000000;
   font-size: 2.4rem;
   transition: transform 0.5s ease;
+  min-width: 2.4rem;
 }
-.faq > div .faq-item button:hover {
+.faq > div > div .faq-item button:hover {
   cursor: pointer;
 }
-.faq > div .faq-item .faq-content {
+.faq > div > div .faq-item .faq-content {
   padding: 1.6rem;
   border: 0;
   border-top: unset;
 }
+.faq > div > div .expand {
+  max-height: 30rem;
+}
+.faq > div > div .expand button ion-icon {
+  transform: rotate(180deg);
+}
 
+.cta {
+  visibility: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #ffffff;
+  padding: 4rem;
+  border-radius: 32px;
+  box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
+}
+.cta label {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.cta label fieldset {
+  display: flex;
+  border: 0;
+  padding: 0;
+}
+.cta label fieldset input {
+  border-radius: 0.8rem 0 0 0.8rem;
+  border: #000000 solid 1px;
+  padding: 1.6rem;
+  width: 100%;
+}
+.cta label fieldset input[value=submit] {
+  border-radius: 0 0.8rem 0.8rem 0;
+  background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  background-position: center;
+  background-size: cover;
+  border-color: #000000;
+  color: #ffffff;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.cta label fieldset input[value=submit]:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #000000;
+}
+footer div p {
+  color: #919191;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero_row_1 {
+    height: 100%;
+  }
+  .hero .hero_row_2 {
+    grid-template-columns: 1fr;
+  }
+  .hero .hero_row_2 div {
+    padding: 3rem;
+  }
+  .hero .notif_container {
+    display: none;
+  }
+  .hero .notif_container .notif {
+    display: none;
+  }
+  .about .about_content {
+    padding: 3rem;
+  }
+  .about .notif_container {
+    display: none;
+  }
+  .about .notif_container .notif {
+    display: none;
+  }
+  .pricing .cards_container {
+    grid-template-columns: 1fr;
+  }
+  .pricing .cards_container .card {
+    padding: 3rem;
+  }
+}
 html {
   scroll-behavior: smooth;
   background-color: #f1f1f1;
