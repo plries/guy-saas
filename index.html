@@ -12,239 +12,235 @@
 </head>
 <body>
 
-    <div class="header_container">
-        <header data-header>
-            <nav>
-                <div class="header_logo">
-                    <a class="active" href="#section1" data-link>guy</a>
-                </div>
-                <ul class="header_list">
-                    <li>
-                        <a href="#section2" data-link>about</a>
-                    </li>
-                    <li>
-                        <a href="#section3" data-link>pricing</a>
-                    </li>
-                    <li>
-                        <a href="#section4" data-link>faq</a>
-                    </li>
-                    <ion-icon id="close_nav" name="close-outline"></ion-icon>
-                </ul>
-                <ion-icon id="open_nav" name="menu-outline"></ion-icon>
-            </nav>
-            <div class="social_icons">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="https://www.tiktok.com/" target="_blank">
-                    <ion-icon name="logo-tiktok"></ion-icon>
-                </a>
-                <ion-icon id="light" name="sunny-outline"></ion-icon>
-                <ion-icon id="dark" name="moon-outline"></ion-icon>
+<div class="header_container">
+    <header data-header>
+        <nav>
+            <div class="header_logo">
+                <a class="active" href="#section1" data-link>guy</a>
             </div>
-        </header>
-    </div>
+            <ul class="header_list">
+                <li>
+                    <a href="#section2" data-link>about</a>
+                </li>
+                <li>
+                    <a href="#section3" data-link>pricing</a>
+                </li>
+                <li>
+                    <a href="#section4" data-link>faq</a>
+                </li>
+                <li id="close_nav">
+                    <ion-icon name="close-outline"></ion-icon>
+                </li>
+            </ul>
+            <ion-icon id="open_nav" name="menu-outline"></ion-icon>
+        </nav>
+        <div class="social_icons">
+            <a href="https://www.instagram.com/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+            <ion-icon id="light" name="sunny-outline"></ion-icon>
+            <ion-icon id="dark" name="moon-outline"></ion-icon>
+        </div>
+    </header>
+</div>
     
-    <section data-section id="section1" class="col_12_4">
+<section data-section id="section1" class="col_12_4">
 
-        <div class="hero s1_lg s1_md">
-            <div class="hero_row_1">
-                <video src="./media/hero.mp4" autoplay muted defaultMuted playsinline loop></video>
-                <div class="notif_container">
-                    <img class="notif" src="./media/hero-notif.png" alt="notifcation from bryan saying "hey good morning! how you doin'?">
-                </div>
-            </div>
-        </div>
-
-        <div class="hero s1_lg s1_md">
-            <div class="hero_row_2">
-                <div>
-                    <h1>guy: your go-to</h1>
-                    <p>whether you need advice, a quick reminder, or just someone to share a joke with, guy is always listening. with guy, you'll never feel alone, because they're always just a notification away.</p>
-                </div>
-                <form>
-                    <label for="email">
-                        stay up to date with guy:
-                        <fieldset>
-                            <input type="email" name="email" placeholder="email" autocomplete="email" required>
-                            <input type="submit" value="submit">
-                        </fieldset>
-                    </label>
-                </form>
-            </div>
-        </div>
-
-    </section>
-
-    <section data-section id="section2" class="col_12_4">
-
-        <div class="about s1_lg s1_md">
-            <img src="./media/friends.jpg" alt="Group of friends smiling and laughing while holding their phones.">
+    <div class="hero s1_lg s1_md">
+        <div class="hero_row_1">
+            <video src="./media/hero.mp4" autoplay muted playsinline loop></video>
             <div class="notif_container">
-                <img class="notif" src="./media/friends-notif.png" alt="notifcation from grace saying "omg you have to be kidding LOL">
-            </div>
-            <div class="about_content">
-                <h2>who's guy?</h2>
-                <p><strong>guy is whoever you want it to be.</strong><br>your bestie, your mentor, your partner. guy is always there, actively listening to your conversations and responding with thoughtful messages, just like a text from a close friend.</p>
+                <img class="notif" src="./media/hero-notif.png" alt="notifcation from bryan saying 'hey good morning! how you doin?'">
             </div>
         </div>
+    </div>
 
-    </section>
-    
-    <section data-section id="section3" class="col_12_4">
-
-        <div class="s1_lg s1_md">
-            <h2>pricing</h2>
-        </div>
-
-        <div class="pricing s1_lg s1_md">
-            <div class="cards_container">
-                <div class="card">
-                    <div>
-                        <div class="card_title">
-                            <div>
-                                <h3>basic</h3>
-                                <h4>free</h4>
-                            </div>
-                            <ion-icon name="shapes-outline"></ion-icon>
-                        </div>
-                        <ul>
-                            <li><span>personalized responses:</span> get tailored notifications based on your conversations.
-                            </li>
-                            <li><span>limited interactions:</span> up to 10 responses per day.
-                            </li>
-                            <li><span>basic insights:</span> weekly summary of interactions and trends.</li>
-                        </ul>
-                    </div>
-                    <button>sign up</button>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="card_title">
-                            <div>
-                                <h3>plus</h3>
-                                <h4>$4.99/month</h4>
-                            </div>
-                            <ion-icon name="star-outline"></ion-icon>
-                        </div>
-                        <p><i>all basic features plus:</i></p>
-                        <ul>
-                            <li><span>unlimited interactions:</span> enjoy unlimited responses and engagement.
-                            </li>
-                            <li><span>enhanced insights:</span> daily summaries and advanced analytics on your conversations.
-                            </li>
-                            <li><span>customizable persona:</span> tailor guy's personality and tone to better match your preferences.
-                            </li>
-                        </ul>
-                    </div>
-                    <button>get started</button>
-                </div>
-                <div class="card">
-                    <div>
-
-                        <div class="card_title">
-                            <div>
-                                <h3>premium</h3>
-                                <h4>$9.99/month</h4>
-                            </div>
-                            <ion-icon name="heart-outline"></ion-icon>
-                        </div>
-                        <p><i>all plus features and:</i></p>
-                        <ul>
-                            <li><span>integration with other apps:</span> sync guy with your calendar, to-do lists, and more for an immersive experience.
-                            </li>
-                            <li><span>voice activation:</span> activate and interact with guy through voice commands for hands-free convenience.
-                            </li>
-                        </ul>
-                    </div>
-                    <button>get started</button>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section data-section id="section4" class="col_12_4">
-
-        <div class="s1_lg s1_md">
-            <h2>faq</h2>
-        </div>
-        <div class="faq s1_lg s1_md">
+    <div class="hero s1_lg s1_md">
+        <div class="hero_row_2">
             <div>
-                <div>
-                    <div class="faq-item">
-                        <button class="faq-btn">
-                            how does guy work?
-                            <ion-icon name="caret-up-circle-outline"></ion-icon>
-                        </button>
-                        <div class="faq-content">
-                            <p>guy uses advanced AI technology to listen to your conversations and provide relevant responses through notifications. guy can understand context and offer advice, reminders, and even jokes based on what you’re talking about.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-btn">
-                            is my privacy protected?
-                            <ion-icon name="caret-up-circle-outline"></ion-icon>
-                        </button>
-                        <div class="faq-content">
-                            <p>absolutely. we take your privacy seriously. guy only processes conversations on your device and doesn’t store or share your data. you have complete control over what guy listens to and responds to.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-btn">
-                            can i customize guy’s personality?
-                            <ion-icon name="caret-up-circle-outline"></ion-icon>
-                        </button>
-                        <div class="faq-content">
-                            <p>yes! with the guy plus and guy premium plans, you can tailor guy's personality and tone to better match your preferences. whether you want guy to be more professional, casual, or humorous, you can adjust his responses accordingly.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-btn">
-                            can i change the frequency of notifications from guy?
-                            <ion-icon name="caret-up-circle-outline"></ion-icon>
-                        </button>
-                        <div class="faq-content">
-                            <p>currently, the frequency of notifications from guy is determined by your interactions and settings. while you can't directly adjust the frequency, guy learns and adapts to provide notifications that best fit your preferences and needs.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-btn">
-                            what should i do if guy isn't responding as expected?
-                            <ion-icon name="caret-up-circle-outline"></ion-icon>
-                        </button>
-                        <div class="faq-content">
-                            <p>if guy isn’t responding as expected, try restarting the app or checking your device’s settings to ensure the app has the necessary permissions. if the issue persists, contact our support team through the app for assistance, and we'll help resolve the problem.</p>
-                        </div>
-                    </div>
-                </div>
+                <h1>guy: your go-to</h1>
+                <p>whether you need advice, a quick reminder, or just someone to share a joke with, guy is always listening. with guy, you'll never feel alone, because they're always just a notification away.</p>
             </div>
-        </div>
-        <form class="cta s1_lg s1_md">
-            <label for="email">
-                stay up to date with guy:
+            <form>
+                <label for="email2">
+                    stay up to date with guy:
+                </label>
                 <fieldset>
-                    <input type="text" name="email" placeholder="email" autocomplete="email" required>
+                    <input id="email2" type="email" name="email" placeholder="email" autocomplete="email" required>
                     <input type="submit" value="submit">
                 </fieldset>
-            </label>
-        </form>
-
-    </section>
-
-    <footer class="col_12_4">
-        <div class="s1_lg s1_md">
-            <p>copyright 2024 guy app inc.</p>
+            </form>
         </div>
-    </footer>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
 
-    <script src="./js/dark.js"></script>
-    <script src="./js/faq.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/nav.js"></script>
+</section>
+
+<section data-section id="section2" class="col_12_4">
+
+    <div class="about s1_lg s1_md">
+        <img src="./media/friends.jpg" alt="Group of friends smiling and laughing while holding their phones.">
+        <div class="notif_container">
+            <img class="notif" src="./media/friends-notif.png" alt="notifcation from grace saying 'omg you have to be kidding LOL'">
+        </div>
+        <div class="about_content">
+            <h2>who's guy?</h2>
+            <p><strong>guy is whoever you want it to be.</strong><br>your bestie, your mentor, your partner. guy is always there, actively listening to your conversations and responding with thoughtful messages, just like a text from a close friend.</p>
+        </div>
+    </div>
+
+</section>
+
+<section data-section id="section3" class="col_12_4">
+    <div class="s1_lg s1_md">
+        <h2>pricing</h2>
+    </div>
+    <div class="pricing s1_lg s1_md">
+        <div class="cards_container">
+            <div class="card">
+                <div>
+                    <div class="card_title">
+                        <div>
+                            <h3>basic</h3>
+                            <h4>free</h4>
+                        </div>
+                        <ion-icon name="shapes-outline"></ion-icon>
+                    </div>
+                    <ul>
+                        <li><span>personalized responses:</span> get tailored notifications based on your conversations.
+                        </li>
+                        <li><span>limited interactions:</span> up to 10 responses per day.
+                        </li>
+                        <li><span>basic insights:</span> weekly summary of interactions and trends.</li>
+                    </ul>
+                </div>
+                <button>sign up</button>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card_title">
+                        <div>
+                            <h3>plus</h3>
+                            <h4>$4.99/month</h4>
+                        </div>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <p><em>all basic features plus:</em></p>
+                    <ul>
+                        <li><span>unlimited interactions:</span> enjoy unlimited responses and engagement.
+                        </li>
+                        <li><span>enhanced insights:</span> daily summaries and advanced analytics on your conversations.
+                        </li>
+                        <li><span>customizable persona:</span> tailor guy's personality and tone to better match your preferences.
+                        </li>
+                    </ul>
+                </div>
+                <button>get started</button>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="card_title">
+                        <div>
+                            <h3>premium</h3>
+                            <h4>$9.99/month</h4>
+                        </div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </div>
+                    <p><em>all plus features and:</em></p>
+                    <ul>
+                        <li><span>integration with other apps:</span> sync guy with your calendar, to-do lists, and more for an immersive experience.
+                        </li>
+                        <li><span>voice activation:</span> activate and interact with guy through voice commands for hands-free convenience.
+                        </li>
+                    </ul>
+                </div>
+                <button>get started</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-section id="section4" class="col_12_4">
+    <div class="s1_lg s1_md">
+        <h2>faq</h2>
+    </div>
+    <div class="faq s1_lg s1_md">
+        <div>
+            <div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        how does guy work?
+                        <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    </button>
+                    <div class="faq-content">
+                        <p>guy uses advanced AI technology to listen to your conversations and provide relevant responses through notifications. guy can understand context and offer advice, reminders, and even jokes based on what you’re talking about.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        is my privacy protected?
+                        <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    </button>
+                    <div class="faq-content">
+                        <p>absolutely. we take your privacy seriously. guy only processes conversations on your device and doesn’t store or share your data. you have complete control over what guy listens to and responds to.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        can i customize guy’s personality?
+                        <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    </button>
+                    <div class="faq-content">
+                        <p>yes! with the guy plus and guy premium plans, you can tailor guy's personality and tone to better match your preferences. whether you want guy to be more professional, casual, or humorous, you can adjust his responses accordingly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        can i change the frequency of notifications from guy?
+                        <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    </button>
+                    <div class="faq-content">
+                        <p>currently, the frequency of notifications from guy is determined by your interactions and settings. while you can't directly adjust the frequency, guy learns and adapts to provide notifications that best fit your preferences and needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        what should i do if guy isn't responding as expected?
+                        <ion-icon name="caret-up-circle-outline"></ion-icon>
+                    </button>
+                    <div class="faq-content">
+                        <p>if guy isn’t responding as expected, try restarting the app or checking your device’s settings to ensure the app has the necessary permissions. if the issue persists, contact our support team through the app for assistance, and we'll help resolve the problem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="cta s1_lg s1_md">
+        <label for="email">
+            stay up to date with guy:
+        </label>
+        <fieldset>
+            <input id="email" type="text" name="email" placeholder="email" autocomplete="email" required>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+</section>
+
+<footer class="col_12_4">
+    <div class="s1_lg s1_md">
+        <p>copyright 2024 guy app inc.</p>
+    </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="./js/dark.js"></script>
+<script src="./js/faq.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/nav.js"></script>
     
 </body>
 </html>

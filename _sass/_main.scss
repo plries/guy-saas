@@ -12,9 +12,11 @@
         video {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             border-radius: 32px;
-            object-position: center;
+            -o-object-position: center;
+               object-position: center;
         }
         .notif_container {
             position: absolute;
@@ -25,8 +27,10 @@
             .notif {
                 background-color: #ffffff99;
                 border-radius: 24px;
-                backdrop-filter: blur(10px);
-                animation: fadeIn 1s ease;
+                -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                -webkit-animation: fadeIn 1s ease;
+                        animation: fadeIn 1s ease;
                 max-width: 400px;
                 visibility: hidden;
             }
@@ -43,8 +47,6 @@
             place-content: center;
             border-radius: 32px;
             padding: 4rem;
-            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
             box-shadow: 0px 0px 12px 1px #9191914D;
             h1 {
                 margin-bottom: 1.2rem;
@@ -56,25 +58,32 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.6rem;
-                fieldset {
-                    display: flex;
-                    border: 0;
-                    padding: 0;
-                    margin: 0;
-                    input {
-                        border-radius: 0.8rem 0 0 0.8rem;
-                        padding: 1.6rem;
-                        width: 100%;
-                    }
-                    input[value="submit"] {
-                        max-width: fit-content;
-                        border-radius: 0 0.8rem 0.8rem 0;
-                    }
-                    input[value="submit"]:hover {
-                        cursor: pointer;
-                    }
+            }
+            fieldset {
+                display: flex;
+                border: 0;
+                padding: 0;
+                margin: 0;
+                input {
+                    border-radius: 0.8rem 0 0 0.8rem;
+                    padding: 1.6rem;
+                    width: 100%;
+                }
+                input[value="submit"] {
+                    max-width: -webkit-fit-content;
+                    max-width: -moz-fit-content;
+                    max-width: fit-content;
+                    border-radius: 0 0.8rem 0.8rem 0;
+                }
+                input[value="submit"]:hover {
+                    cursor: pointer;
                 }
             }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
         }
     }
 }
@@ -85,8 +94,10 @@
     > img {
         height: calc(100vh - 7.2rem);
         width: 100%;
-        object-position: center center;
-        object-fit: cover;
+        -o-object-position: center center;
+           object-position: center center;
+        -o-object-fit: cover;
+           object-fit: cover;
         border-radius: 32px;
     }
     .notif_container {
@@ -96,9 +107,11 @@
         margin: 2.4rem;
         .notif {
             border-radius: 24px;
-            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
             max-width: 400px;
-            animation: fadeIn 1s ease;
+            -webkit-animation: fadeIn 1s ease;
+                    animation: fadeIn 1s ease;
             visibility: hidden;
         }
     }
@@ -196,6 +209,8 @@ section#section4 {
         width: 100%;
         margin: 4.8rem 0;
         > div {
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
             height: fit-content;
             border-radius: 32px;
             overflow: hidden;;
@@ -241,32 +256,39 @@ section#section4 {
 
 .cta {
     visibility: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 4rem;
     border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
     label {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
-        fieldset {
-            display: flex;
-            border: 0;
-            padding: 0;
-            input {
-                border-radius: 0.8rem 0 0 0.8rem;
-                padding: 1.6rem;
-                width: 100%;
-            }
-            input[value="submit"] {
-                border-radius: 0 0.8rem 0.8rem 0;
-                background-position: center;
-                background-size: cover;
-                min-width: fit-content;
-                max-width: 25%;
-            }
-            input[value="submit"]:hover {
-                cursor: pointer;
-            }
+    }
+    fieldset {
+        display: flex;
+        border: 0;
+        padding: 0;
+        input {
+            border-radius: 0.8rem 0 0 0.8rem;
+            padding: 1.6rem;
+            width: 100%;
+        }
+        input[value="submit"] {
+            border-radius: 0 0.8rem 0.8rem 0;
+            background-position: center;
+            background-size: cover;
+            min-width: -webkit-fit-content;
+            min-width: -moz-fit-content;
+            min-width: fit-content;
+            max-width: 25%;
+        }
+        input[value="submit"]:hover {
+            cursor: pointer;
         }
     }
 }

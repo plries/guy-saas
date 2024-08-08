@@ -1,3 +1,14 @@
+@-webkit-keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -6,6 +17,15 @@
     to {
         opacity: 1;
         transform: translate(0);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -18,6 +38,14 @@
     }
 }
 
+@-webkit-keyframes dotAppear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
 @keyframes dotAppear {
     from {
         opacity: 0;
@@ -26,10 +54,32 @@
     }
 }
 
+@-webkit-keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 @keyframes slideRight {
     from {
         opacity: 0;
         transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
     }
     to {
         opacity: 1;
@@ -53,12 +103,14 @@
         .notif_container {
             .notif {
                 visibility: visible;
-                animation: fadeUp 1s ease;
+                -webkit-animation: fadeUp 1s ease;
+                        animation: fadeUp 1s ease;
             }
         }
         .hero_row_2 {
             visibility: visible;
-            animation: slideRight 1s ease;
+            -webkit-animation: slideRight 1s ease;
+                    animation: slideRight 1s ease;
         }
     }
 }
@@ -68,12 +120,14 @@
         .notif_container {
             .notif {
                 visibility: visible;
-                animation: fadeUp 1s ease;
+                -webkit-animation: fadeUp 1s ease;
+                        animation: fadeUp 1s ease;
             }
         }
         .about_content {
             visibility: visible;
-            animation: slideLeft 1s ease;
+            -webkit-animation: slideLeft 1s ease;
+                    animation: slideLeft 1s ease;
         }
     }
 }
@@ -83,7 +137,8 @@
         .cards_container {
             .card {
                 visibility: visible;
-                animation: slideRight 1s ease;
+                -webkit-animation: slideRight 1s ease;
+                        animation: slideRight 1s ease;
             }
         }
     }
@@ -93,11 +148,13 @@
     .faq {
         > div {
             visibility: visible;
-            animation: slideLeft 1s ease;
+            -webkit-animation: slideLeft 1s ease;
+                    animation: slideLeft 1s ease;
         }
     }
     .cta {
         visibility: visible;
-        animation: slideRight 1s ease;
+        -webkit-animation: slideRight 1s ease;
+                animation: slideRight 1s ease;
     }
 }

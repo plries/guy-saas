@@ -45,7 +45,8 @@
                     transform: translateX(calc(var(--markerLeft) + var(--markerWidth)  / 2 - 0.2rem));
                     transition: transform ease 0.25s;
                     will-change: width;
-                    animation: dotAppear ease 0.5s;
+                    -webkit-animation: dotAppear ease 0.5s;
+                            animation: dotAppear ease 0.5s;
                 }
                 @media (min-width: 40em) {
                     a::after {
@@ -79,7 +80,8 @@
             margin-top: 0.8rem;
             ion-icon {
                 font-size: 2rem;
-                animation: fadeIn 0.75s ease;
+                -webkit-animation: fadeIn 0.75s ease;
+                        animation: fadeIn 0.75s ease;
             }
             #dark {
                 display: none;
@@ -106,6 +108,8 @@
                     height: 100vh;
                     top: 0;
                     right: 0;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
                     width: fit-content;
                     padding: 2.4rem;
                     z-index: 2;

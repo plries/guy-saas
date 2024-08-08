@@ -11,11 +11,11 @@ p, a, input, ul, li, button {
 }
 
 h1 {
-    color: $black;
+    color: $grey-900;
 }
 
 h2 {
-    color: $grey-900;
+    color: $grey-800;
 }
 
 h3 {
@@ -33,8 +33,6 @@ strong {
 .header_container {
     header {
         background-color: $white;
-        -webkit-box-shadow: 0px 0px 23px 1px #91919180;
-        -moz-box-shadow: 0px 0px 23px 1px #91919180;
         box-shadow: 0px 0px 23px 1px #91919180;
         nav {
             .header_logo {
@@ -89,19 +87,14 @@ section:nth-child(2n + 1) {
         div,
         form {
             background-color: $white;
-            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
             box-shadow: 0px 0px 12px 1px #9191914D;
-            label {
-                fieldset {
-                    input {
-                        border: $grey-900 solid 1px;
-                    }
-                    input[value="submit"] {
-                        background-color: $grey-900;
-                        border-color: $grey-900;
-                        color: $white;
-                    }
+            fieldset {
+                input {
+                    border: $grey-700 solid 1px;
+                }
+                input[value="submit"] {
+                    background-color: $grey-800;
+                    color: $white;
                 }
             }
         }
@@ -117,8 +110,6 @@ section:nth-child(2n + 1) {
     }
     .about_content {
         background-color: $white;
-        -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-        -moz-box-shadow: 0px 0px 12px 1px #9191914D;
         box-shadow: 0px 0px 12px 1px #9191914D;
     }
 }
@@ -127,8 +118,6 @@ section:nth-child(2n + 1) {
     .cards_container {
         .card {
             background-color: $white;
-            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
             box-shadow: 0px 0px 12px 1px #9191914D;
             .card_title {
                 ion-icon {
@@ -138,18 +127,16 @@ section:nth-child(2n + 1) {
             button {
                 background-color: $grey-100;
                 border: $grey-500 solid 1px;
-                color: $black;
+                color: $grey-900;
             }
         }
         > div:nth-child(3) {
             border: $grey-500 2px solid;
-            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
             box-shadow: 0px 0px 12px 1px #9191914D;
             button {
-                background-color: $grey-900;
+                background-color: $grey-800;
                 color: $grey-100;
-                border: $black solid 1px;
+                border: $grey-900 solid 1px;
             }
         }
     }
@@ -158,16 +145,14 @@ section:nth-child(2n + 1) {
 .faq {
     > div {
         > div {
-            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
             box-shadow: 0px 0px 12px 1px #9191914D;
             .faq-item {
                 button {
                     border-bottom: $grey-300 2px solid;
-                    color: $black;
+                    color: $grey-900;
                     background-color: $grey-100;
                     ion-icon {
-                        color: $black;
+                        color: $grey-900;
                     }
                 }
             }
@@ -177,18 +162,16 @@ section:nth-child(2n + 1) {
 
 .cta {
     background-color: $white;
-    -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
-    -moz-box-shadow: 0px 0px 12px 1px #9191914D;
     box-shadow: 0px 0px 12px 1px #9191914D;
     label {
         fieldset {
             input {
-                border: $black solid 1px;
+                border: $grey-900 solid 1px;
             }
             input[value="submit"] {
                 border-radius: 0 0.8rem 0.8rem 0;
                 background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
-                border-color: $black;
+                border-color: $grey-900;
                 color: $white;
             }
         }
@@ -196,7 +179,7 @@ section:nth-child(2n + 1) {
 }
 
 footer {
-    background-color: $black;
+    background-color: $grey-900;
     div {
         p {
             color: $grey-500;
@@ -205,7 +188,7 @@ footer {
 }
 
 .darkmode {
-    background-color: $grey-900;
+    background-color: $grey-800;
     
     h1, h2, label {
         color: $grey-100;
@@ -241,9 +224,7 @@ footer {
     
     .header_container {
         header {
-            background-color: $black;
-            -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-            -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+            background-color: $grey-900;
             box-shadow: 0px 0px 12px 1px #0000004D;
             nav {
                 .header_logo {
@@ -282,26 +263,22 @@ footer {
     }    
     
     section:nth-child(2n + 1) {
-        background-color: $black;
+        background-color: $grey-900;
     }
     
     .hero {
         .hero_row_2 {
             div,
             form {
-                background-color: $black;
-                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                background-color: $grey-900;
                 box-shadow: 0px 0px 12px 1px #0000004D;
-                label {
-                    fieldset {
-                        input {
-                            border: $grey-100 solid 1px;
-                        }
-                        input[value="submit"] {
-                            background-color: $grey-700;
-                            color: $white;
-                        }
+                fieldset {
+                    input {
+                        border: $grey-600 solid 1px;
+                    }
+                    input[value="submit"] {
+                        background-color: $grey-800;
+                        color: $white;
                     }
                 }
             }
@@ -310,9 +287,7 @@ footer {
     
     .about {
         .about_content {
-            background-color: $grey-900;
-            -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-            -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+            background-color: $grey-800;
             box-shadow: 0px 0px 12px 1px #0000004D;
         }
     }
@@ -320,9 +295,7 @@ footer {
     .pricing {
         .cards_container {
             .card {
-                background-color: $black;
-                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                background-color: $grey-900;
                 box-shadow: 0px 0px 12px 1px #0000004D;
                 .card_title {
                     ion-icon {
@@ -337,12 +310,10 @@ footer {
             }
             > div:nth-child(3) {
                 border: $grey-700 2px solid;
-                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
                 box-shadow: 0px 0px 12px 1px #0000004D;
                 button {
                     background-color: $grey-100;
-                    color: $black;
+                    color: $grey-900;
                     border: $grey-200 solid 1px;
                 }
             }
@@ -352,14 +323,12 @@ footer {
     .faq {
         > div {
             > div {
-                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
                 box-shadow: 0px 0px 12px 1px #0000004D;
                 .faq-item {
                     button {
-                        border-bottom: $grey-800 2px solid;
+                        border-bottom: $grey-700 2px solid;
                         color: $white;
-                        background-color: $grey-900;
+                        background-color: $grey-800;
                         ion-icon {
                             color: $white;
                         }
@@ -370,26 +339,23 @@ footer {
     }
     
     .cta {
-        background-color: $black;
-        -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
-        -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+        background-color: $grey-900;
         box-shadow: 0px 0px 12px 1px #0000004D;
-        label {
-            fieldset {
-                input {
-                    border: $white solid 1px;
-                }
-                input[value="submit"] {
-                    border-radius: 0 0.8rem 0.8rem 0;
-                    background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
-                    filter: invert(0.2);
-                }
+        fieldset {
+            input {
+                border: $grey-700 solid 1px;
+            }
+            input[value="submit"] {
+                border-radius: 0 0.8rem 0.8rem 0;
+                background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+                -webkit-filter: invert(0.1);
+                        filter: invert(0.1);
             }
         }
     }
     
     footer {
-        background-color: $grey-900;
+        background-color: $grey-800;
         div {
             p {
                 color: $grey-500;

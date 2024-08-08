@@ -349,20 +349,20 @@ html {
 }
 
 h1, h2, label {
-  color: #525252;
+  color: #474747;
   font-family: "Lora", Cochin, Georgia, Times, serif;
   margin: 0;
   font-weight: 400;
 }
 
 h3, h4 {
-  color: #2c2c2c;
+  color: #161616;
   font-family: "Inter", Helvetica, sans-serif;
   margin: 0;
 }
 
 p, a, input, ul, li, button {
-  color: #525252;
+  color: #474747;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 2rem;
 }
@@ -376,7 +376,7 @@ a {
 }
 
 h1 {
-  color: #0f0f0f;
+  color: #000000;
   font-size: 6.4rem;
 }
 
@@ -388,17 +388,17 @@ h2 {
 h3 {
   font-size: 3.6rem;
   font-weight: 600;
-  color: #2c2c2c;
+  color: #161616;
 }
 
 h4 {
-  color: #525252;
+  color: #474747;
   font-size: 2.4rem;
   font-weight: 400;
 }
 
 strong {
-  color: #525252;
+  color: #474747;
   font-weight: 600;
 }
 
@@ -634,10 +634,10 @@ strong {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 32px;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 .hero .hero_row_1 .notif_container {
   position: absolute;
@@ -650,7 +650,7 @@ strong {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   animation: fadeIn 1s ease;
   max-width: 400px;
   visibility: hidden;
@@ -683,28 +683,33 @@ strong {
   flex-direction: column;
   gap: 1.6rem;
 }
-.hero .hero_row_2 div label fieldset,
-.hero .hero_row_2 form label fieldset {
+.hero .hero_row_2 div fieldset,
+.hero .hero_row_2 form fieldset {
   display: flex;
   border: 0;
   padding: 0;
   margin: 0;
 }
-.hero .hero_row_2 div label fieldset input,
-.hero .hero_row_2 form label fieldset input {
+.hero .hero_row_2 div fieldset input,
+.hero .hero_row_2 form fieldset input {
   border-radius: 0.8rem 0 0 0.8rem;
   padding: 1.6rem;
   width: 100%;
 }
-.hero .hero_row_2 div label fieldset input[value=submit],
-.hero .hero_row_2 form label fieldset input[value=submit] {
+.hero .hero_row_2 div fieldset input[value=submit],
+.hero .hero_row_2 form fieldset input[value=submit] {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 0 0.8rem 0.8rem 0;
 }
-.hero .hero_row_2 div label fieldset input[value=submit]:hover,
-.hero .hero_row_2 form label fieldset input[value=submit]:hover {
+.hero .hero_row_2 div fieldset input[value=submit]:hover,
+.hero .hero_row_2 form fieldset input[value=submit]:hover {
   cursor: pointer;
+}
+.hero .hero_row_2 form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .about {
@@ -715,9 +720,9 @@ strong {
   height: calc(100vh - 7.2rem);
   width: 100%;
   -o-object-position: center center;
-     object-position: center center;
+  object-position: center center;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 32px;
 }
 .about .notif_container {
@@ -729,7 +734,7 @@ strong {
 .about .notif_container .notif {
   border-radius: 24px;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   max-width: 400px;
   animation: fadeIn 1s ease;
   visibility: hidden;
@@ -871,23 +876,26 @@ section#section4 {
   height: fit-content;
   padding: 4rem;
   border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 .cta label {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.cta label fieldset {
+.cta fieldset {
   display: flex;
   border: 0;
   padding: 0;
 }
-.cta label fieldset input {
+.cta fieldset input {
   border-radius: 0.8rem 0 0 0.8rem;
   padding: 1.6rem;
   width: 100%;
 }
-.cta label fieldset input[value=submit] {
+.cta fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
   background-position: center;
   background-size: cover;
@@ -895,7 +903,7 @@ section#section4 {
   min-width: fit-content;
   max-width: 25%;
 }
-.cta label fieldset input[value=submit]:hover {
+.cta fieldset input[value=submit]:hover {
   cursor: pointer;
 }
 
@@ -936,35 +944,35 @@ section#section4 {
   }
 }
 h1, h2, label {
-  color: #525252;
+  color: #474747;
 }
 
 h3, h4 {
-  color: #2c2c2c;
+  color: #161616;
 }
 
 p, a, input, ul, li, button {
-  color: #525252;
+  color: #474747;
 }
 
 h1 {
-  color: #0f0f0f;
-}
-
-h2 {
   color: #111111;
 }
 
+h2 {
+  color: #161616;
+}
+
 h3 {
-  color: #2c2c2c;
+  color: #161616;
 }
 
 h4 {
-  color: #525252;
+  color: #474747;
 }
 
 strong {
-  color: #525252;
+  color: #474747;
 }
 
 .header_container header {
@@ -972,10 +980,10 @@ strong {
   box-shadow: 0px 0px 23px 1px rgba(145, 145, 145, 0.5019607843);
 }
 .header_container header nav .header_logo a::after {
-  background-color: #525252;
+  background-color: #474747;
 }
 .header_container header .social_icons ion-icon {
-  color: #525252;
+  color: #474747;
 }
 
 @media screen and (max-width: 768px) {
@@ -983,10 +991,10 @@ strong {
     background-color: rgba(255, 255, 255, 0.9019607843);
   }
   .header_container header nav .header_list ion-icon {
-    color: #525252;
+    color: #474747;
   }
   .header_container header nav ion-icon {
-    color: #525252;
+    color: #474747;
   }
 }
 section:nth-child(2n+1) {
@@ -1002,14 +1010,13 @@ section:nth-child(2n+1) {
   background-color: #ffffff;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
-.hero .hero_row_2 div label fieldset input,
-.hero .hero_row_2 form label fieldset input {
-  border: #111111 solid 1px;
+.hero .hero_row_2 div fieldset input,
+.hero .hero_row_2 form fieldset input {
+  border: #474747 solid 1px;
 }
-.hero .hero_row_2 div label fieldset input[value=submit],
-.hero .hero_row_2 form label fieldset input[value=submit] {
-  background-color: #111111;
-  border-color: #111111;
+.hero .hero_row_2 div fieldset input[value=submit],
+.hero .hero_row_2 form fieldset input[value=submit] {
+  background-color: #161616;
   color: #ffffff;
 }
 
@@ -1027,21 +1034,21 @@ section:nth-child(2n+1) {
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .pricing .cards_container .card .card_title ion-icon {
-  color: #2c2c2c;
+  color: #161616;
 }
 .pricing .cards_container .card button {
   background-color: #f1f1f1;
-  border: #919191 solid 1px;
-  color: #0f0f0f;
+  border: #858585 solid 1px;
+  color: #111111;
 }
 .pricing .cards_container > div:nth-child(3) {
-  border: #919191 2px solid;
+  border: #858585 2px solid;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .pricing .cards_container > div:nth-child(3) button {
-  background-color: #111111;
+  background-color: #161616;
   color: #f1f1f1;
-  border: #0f0f0f solid 1px;
+  border: #111111 solid 1px;
 }
 
 .faq > div > div {
@@ -1049,11 +1056,11 @@ section:nth-child(2n+1) {
 }
 .faq > div > div .faq-item button {
   border-bottom: #c6c6c6 2px solid;
-  color: #0f0f0f;
+  color: #111111;
   background-color: #f1f1f1;
 }
 .faq > div > div .faq-item button ion-icon {
-  color: #0f0f0f;
+  color: #111111;
 }
 
 .cta {
@@ -1061,24 +1068,24 @@ section:nth-child(2n+1) {
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
 .cta label fieldset input {
-  border: #0f0f0f solid 1px;
+  border: #111111 solid 1px;
 }
 .cta label fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
   background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
-  border-color: #0f0f0f;
+  border-color: #111111;
   color: #ffffff;
 }
 
 footer {
-  background-color: #0f0f0f;
+  background-color: #111111;
 }
 footer div p {
-  color: #919191;
+  color: #858585;
 }
 
 .darkmode {
-  background-color: #111111;
+  background-color: #161616;
 }
 .darkmode h1, .darkmode h2, .darkmode label {
   color: #f1f1f1;
@@ -1099,13 +1106,13 @@ footer div p {
   color: #f1f1f1;
 }
 .darkmode h4 {
-  color: #b3b3b3;
+  color: #a5a5a5;
 }
 .darkmode strong {
   color: #c6c6c6;
 }
 .darkmode .header_container header {
-  background-color: #0f0f0f;
+  background-color: #111111;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .header_container header nav .header_logo a::after {
@@ -1126,75 +1133,75 @@ footer div p {
   }
 }
 .darkmode section:nth-child(2n+1) {
-  background-color: #0f0f0f;
+  background-color: #111111;
 }
 .darkmode .hero .hero_row_2 div,
 .darkmode .hero .hero_row_2 form {
-  background-color: #0f0f0f;
-  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
-}
-.darkmode .hero .hero_row_2 div label fieldset input,
-.darkmode .hero .hero_row_2 form label fieldset input {
-  border: #f1f1f1 solid 1px;
-}
-.darkmode .hero .hero_row_2 div label fieldset input[value=submit],
-.darkmode .hero .hero_row_2 form label fieldset input[value=submit] {
-  background-color: #525252;
-  color: #ffffff;
-}
-.darkmode .about .about_content {
   background-color: #111111;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
+.darkmode .hero .hero_row_2 div fieldset input,
+.darkmode .hero .hero_row_2 form fieldset input {
+  border: #616161 solid 1px;
+}
+.darkmode .hero .hero_row_2 div fieldset input[value=submit],
+.darkmode .hero .hero_row_2 form fieldset input[value=submit] {
+  background-color: #161616;
+  color: #ffffff;
+}
+.darkmode .about .about_content {
+  background-color: #161616;
+  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
+}
 .darkmode .pricing .cards_container .card {
-  background-color: #0f0f0f;
+  background-color: #111111;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .pricing .cards_container .card .card_title ion-icon {
   color: #f1f1f1;
 }
 .darkmode .pricing .cards_container .card button {
-  background-color: #2c2c2c;
-  border: #525252 solid 1px;
+  background-color: #161616;
+  border: #474747 solid 1px;
   color: #ffffff;
 }
 .darkmode .pricing .cards_container > div:nth-child(3) {
-  border: #525252 2px solid;
+  border: #474747 2px solid;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .pricing .cards_container > div:nth-child(3) button {
   background-color: #f1f1f1;
-  color: #0f0f0f;
+  color: #111111;
   border: #d8d8d8 solid 1px;
 }
 .darkmode .faq > div > div {
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .faq > div > div .faq-item button {
-  border-bottom: #2c2c2c 2px solid;
+  border-bottom: #474747 2px solid;
   color: #ffffff;
-  background-color: #111111;
+  background-color: #161616;
 }
 .darkmode .faq > div > div .faq-item button ion-icon {
   color: #ffffff;
 }
 .darkmode .cta {
-  background-color: #0f0f0f;
+  background-color: #111111;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
-.darkmode .cta label fieldset input {
-  border: #ffffff solid 1px;
+.darkmode .cta fieldset input {
+  border: #474747 solid 1px;
 }
-.darkmode .cta label fieldset input[value=submit] {
+.darkmode .cta fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
   background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
-  filter: invert(0.2);
+  filter: invert(0.1);
 }
 .darkmode footer {
-  background-color: #111111;
+  background-color: #161616;
 }
 .darkmode footer div p {
-  color: #919191;
+  color: #858585;
 }
 
 html {
