@@ -1,0 +1,399 @@
+h1, h2, label {
+    color: $grey-700;
+}
+
+h3, h4 {
+    color: $grey-800;
+}
+
+p, a, input, ul, li, button {
+    color: $grey-700;
+}
+
+h1 {
+    color: $black;
+}
+
+h2 {
+    color: $grey-900;
+}
+
+h3 {
+    color: $grey-800;
+}
+
+h4 {
+    color: $grey-700;
+}
+
+strong {
+    color: $grey-700;
+}
+
+.header_container {
+    header {
+        background-color: $white;
+        -webkit-box-shadow: 0px 0px 23px 1px #91919180;
+        -moz-box-shadow: 0px 0px 23px 1px #91919180;
+        box-shadow: 0px 0px 23px 1px #91919180;
+        nav {
+            .header_logo {
+                a::after {
+                    background-color: $grey-700;
+                }
+            }
+        }
+        .social_icons {
+            ion-icon {
+                color: $grey-700;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+        
+    .header_container {
+        header {
+            nav {
+                .header_list {
+                    background-color: #ffffffE6;
+                    ion-icon {
+                        color: $grey-700;
+                    }
+                }
+                ion-icon {
+                    color: $grey-700;
+                }
+            }
+        }
+    }
+
+}
+
+section:nth-child(2n + 1) {
+    background-color: $white;
+}
+
+.hero {
+    .hero_row_1 {
+        .notif_container {
+            .notif {
+                background-color: #ffffff99;
+                border: 0.25px $grey-100 solid;
+            }
+        }
+    }
+    .hero_row_2 {
+        div,
+        form {
+            background-color: $white;
+            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            label {
+                fieldset {
+                    input {
+                        border: $grey-900 solid 1px;
+                    }
+                    input[value="submit"] {
+                        background-color: $grey-900;
+                        border-color: $grey-900;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about {
+    .notif_container {
+        .notif {
+            background-color: #ffffff99;
+            border: 0.25px $grey-100 solid;
+        }
+    }
+    .about_content {
+        background-color: $white;
+        -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+        -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+        box-shadow: 0px 0px 12px 1px #9191914D;
+    }
+}
+
+.pricing {
+    .cards_container {
+        .card {
+            background-color: $white;
+            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            .card_title {
+                ion-icon {
+                    color: $grey-800;
+                }
+            }
+            button {
+                background-color: $grey-100;
+                border: $grey-500 solid 1px;
+                color: $black;
+            }
+        }
+        > div:nth-child(3) {
+            border: $grey-500 2px solid;
+            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            button {
+                background-color: $grey-900;
+                color: $grey-100;
+                border: $black solid 1px;
+            }
+        }
+    }
+}
+
+.faq {
+    > div {
+        > div {
+            -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+            -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            .faq-item {
+                button {
+                    border-bottom: $grey-300 2px solid;
+                    color: $black;
+                    background-color: $grey-100;
+                    ion-icon {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cta {
+    background-color: $white;
+    -webkit-box-shadow: 0px 0px 12px 1px #9191914D;
+    -moz-box-shadow: 0px 0px 12px 1px #9191914D;
+    box-shadow: 0px 0px 12px 1px #9191914D;
+    label {
+        fieldset {
+            input {
+                border: $black solid 1px;
+            }
+            input[value="submit"] {
+                border-radius: 0 0.8rem 0.8rem 0;
+                background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+                border-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $black;
+    div {
+        p {
+            color: $grey-500;
+        }
+    }
+}
+
+.darkmode {
+    background-color: $grey-900;
+    
+    h1, h2, label {
+        color: $grey-100;
+    }
+    
+    h3, h4 {
+        color: $grey-200;
+    }
+    
+    p, a, input, ul, li, button {
+        color: $grey-300;
+    }
+    
+    h1 {
+        color: $white;
+    }
+    
+    h2 {
+        color: $grey-100;
+    }
+    
+    h3 {
+        color: $grey-100;
+    }
+    
+    h4 {
+        color: $grey-400;
+    }
+    
+    strong {
+        color: $grey-300;
+    }
+    
+    .header_container {
+        header {
+            background-color: $black;
+            -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+            -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+            box-shadow: 0px 0px 12px 1px #0000004D;
+            nav {
+                .header_logo {
+                    a::after {
+                        background-color: $white;
+                    }
+                }
+            }
+            .social_icons {
+                ion-icon {
+                    color: $grey-300;
+                }
+            }
+        }
+    
+    }
+    
+    @media screen and (max-width: 768px) {
+        
+        .header_container {
+            header {
+                nav {
+                    .header_list {
+                        background-color: #000000E6;
+                        ion-icon {
+                            color: $grey-100;
+                        }
+                    }
+                    ion-icon {
+                        color: $grey-100;
+                    }
+                }
+            }
+        }
+    
+    }    
+    
+    section:nth-child(2n + 1) {
+        background-color: $black;
+    }
+    
+    .hero {
+        .hero_row_2 {
+            div,
+            form {
+                background-color: $black;
+                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                box-shadow: 0px 0px 12px 1px #0000004D;
+                label {
+                    fieldset {
+                        input {
+                            border: $grey-100 solid 1px;
+                        }
+                        input[value="submit"] {
+                            background-color: $grey-700;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .about {
+        .about_content {
+            background-color: $grey-900;
+            -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+            -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+            box-shadow: 0px 0px 12px 1px #0000004D;
+        }
+    }
+    
+    .pricing {
+        .cards_container {
+            .card {
+                background-color: $black;
+                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                box-shadow: 0px 0px 12px 1px #0000004D;
+                .card_title {
+                    ion-icon {
+                        color: $grey-100;
+                    }
+                }
+                button {
+                    background-color: $grey-800;
+                    border: $grey-700 solid 1px;
+                    color: $white;
+                }
+            }
+            > div:nth-child(3) {
+                border: $grey-700 2px solid;
+                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                box-shadow: 0px 0px 12px 1px #0000004D;
+                button {
+                    background-color: $grey-100;
+                    color: $black;
+                    border: $grey-200 solid 1px;
+                }
+            }
+        }
+    }
+    
+    .faq {
+        > div {
+            > div {
+                -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+                -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+                box-shadow: 0px 0px 12px 1px #0000004D;
+                .faq-item {
+                    button {
+                        border-bottom: $grey-800 2px solid;
+                        color: $white;
+                        background-color: $grey-900;
+                        ion-icon {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .cta {
+        background-color: $black;
+        -webkit-box-shadow: 0px 0px 12px 1px #0000004D;
+        -moz-box-shadow: 0px 0px 12px 1px #0000004D;
+        box-shadow: 0px 0px 12px 1px #0000004D;
+        label {
+            fieldset {
+                input {
+                    border: $white solid 1px;
+                }
+                input[value="submit"] {
+                    border-radius: 0 0.8rem 0.8rem 0;
+                    background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+                    filter: invert(0.2);
+                }
+            }
+        }
+    }
+    
+    footer {
+        background-color: $grey-900;
+        div {
+            p {
+                color: $grey-500;
+            }
+        }
+    }
+}

@@ -1,5 +1,3 @@
-history.scrollRestoration = "manual";
-
 // We need to track and update the header, the nav links, and the page sections
 const header = document.querySelector('[data-header]')
 const sections = [...document.querySelectorAll('[data-section]')]
@@ -23,12 +21,6 @@ const getTargetSection = (entry) => {
 	} else {
 		return sections[index + 1]
 	}
-}
-
-// Update the global colour theme using a data attribute
-const updateColor = (target) => {
-	const theme = target.dataset.section
-	target.setAttribute('data-theme', theme)
 }
 
 // Check whether or not we need to update the current target
@@ -55,18 +47,6 @@ const updateStyle = (entries) => {
 	});
 }
 
-// play GSAP animation when in view
-const playAnimation = (entries) => {
-	
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			notif.play();
-		} else {
-			notif.pause();
-		}
-	});
-}
-
 // Update the nav marker by:
 // 1. getting the current section name
 // 2. finding the nav item with that id
@@ -88,17 +68,6 @@ const updateMarker = (target) => {
 	header.style.setProperty('--markerWidth', `${link.offsetWidth}px`)
 	header.style.setProperty('--markerLeft', `${distanceFromLeft}px`)
 
-	link.style.color = "#000000";
-	
-	headerLinks.forEach((e) => {
-
-			if (e !== link) {
-				e.style.color = "#919191";
-			}
-
-	})
-
-
 }
 
 // Run the observer, verify the scroll direction, update the entry when conditions pass
@@ -115,7 +84,6 @@ const onIntersect = (entries) => {
 		const target = direction === 'down' ? getTargetSection(entry) : entry.target
 
 		if (shouldUpdate(entry)) {
-			updateColor(target)
 			updateMarker(target)
 		}
 		updateStyle(entries)

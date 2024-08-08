@@ -16,7 +16,7 @@
         <header data-header>
             <nav>
                 <div class="header_logo">
-                    <a href="#section1" data-link>guy</a>
+                    <a class="active" href="#section1" data-link>guy</a>
                 </div>
                 <ul class="header_list">
                     <li>
@@ -28,8 +28,9 @@
                     <li>
                         <a href="#section4" data-link>faq</a>
                     </li>
+                    <ion-icon id="close_nav" name="close-outline"></ion-icon>
                 </ul>
-                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon id="open_nav" name="menu-outline"></ion-icon>
             </nav>
             <div class="social_icons">
                 <a href="https://www.instagram.com/" target="_blank">
@@ -38,9 +39,8 @@
                 <a href="https://www.tiktok.com/" target="_blank">
                     <ion-icon name="logo-tiktok"></ion-icon>
                 </a>
-                <button>
-                    <ion-icon name="sunny-outline"></ion-icon>
-                </button>
+                <ion-icon id="light" name="sunny-outline"></ion-icon>
+                <ion-icon id="dark" name="moon-outline"></ion-icon>
             </div>
         </header>
     </div>
@@ -62,15 +62,15 @@
                     <h1>guy: your go-to</h1>
                     <p>whether you need advice, a quick reminder, or just someone to share a joke with, guy is always listening. with guy, you'll never feel alone, because they're always just a notification away.</p>
                 </div>
-                <div>
+                <form>
                     <label for="email">
                         stay up to date with guy:
                         <fieldset>
-                            <input type="text" name="email" placeholder="email" autocomplete="email" required>
+                            <input type="email" name="email" placeholder="email" autocomplete="email" required>
                             <input type="submit" value="submit">
                         </fieldset>
                     </label>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -220,7 +220,7 @@
                 </div>
             </div>
         </div>
-        <div class="cta s1_lg s1_md">
+        <form class="cta s1_lg s1_md">
             <label for="email">
                 stay up to date with guy:
                 <fieldset>
@@ -228,7 +228,7 @@
                     <input type="submit" value="submit">
                 </fieldset>
             </label>
-        </div>
+        </form>
 
     </section>
 
@@ -241,8 +241,10 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/dark.js"></script>
     <script src="./js/faq.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/nav.js"></script>
     
 </body>
 </html>
