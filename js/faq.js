@@ -1,16 +1,16 @@
 const faqs = document.querySelectorAll('.faq-item');
+const faqBtns = document.querySelectorAll('.faq-btn');
 
 function toggleFaq() {
-    
-    
+
     faqs.forEach(el => {
-        if (el !== this) {
+        if (el !== this.parentElement) {
             el.classList.remove('expand');
         }
     })
 
-    this.classList.toggle('expand');
+    this.parentElement.classList.toggle('expand');
 
 }
 
-faqs.forEach(faq => faq.addEventListener('click', toggleFaq));
+faqBtns.forEach(faqBtn => faqBtn.addEventListener('click', toggleFaq));

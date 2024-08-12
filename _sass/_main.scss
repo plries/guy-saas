@@ -13,10 +13,10 @@
             height: 100%;
             width: 100%;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             border-radius: 32px;
             -o-object-position: center;
-               object-position: center;
+            object-position: center;
         }
         .notif_container {
             position: absolute;
@@ -25,7 +25,6 @@
             margin: 2.4rem;
             translate: 0 -12.4rem;
             .notif {
-                background-color: #ffffff99;
                 border-radius: 24px;
                 -webkit-backdrop-filter: blur(10px);
                         backdrop-filter: blur(10px);
@@ -95,9 +94,9 @@
         height: calc(100vh - 7.2rem);
         width: 100%;
         -o-object-position: center center;
-           object-position: center center;
+        object-position: center center;
         -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         border-radius: 32px;
     }
     .notif_container {
@@ -178,9 +177,11 @@
                 width: 100%;
                 padding: 1.6rem;
                 border-radius: 0.8rem;
+                transition: scale 0.25s ease;
             }
             button:hover {
                 cursor: pointer;
+                scale: 0.95;
             }
         }
         > div:nth-child(3) {
@@ -226,6 +227,7 @@ section#section4 {
                     width: 100%;
                     font-weight: 600;
                     display: flex;
+                    align-items: center;
                     justify-content: space-between;
                     ion-icon {
                         font-size: 2.4rem;
@@ -243,7 +245,7 @@ section#section4 {
                 }
             }
             .expand {
-                max-height: 30rem;
+                max-height: 20rem;
                 button {
                     ion-icon {
                         transform: rotate(180deg);
@@ -252,6 +254,10 @@ section#section4 {
             }
         }
     }
+}
+
+#section4 {
+    min-height: calc(100vh - 7.2rem);
 }
 
 .cta {
@@ -297,6 +303,7 @@ section#section4 {
     
     .hero {
         .hero_row_1 {
+            aspect-ratio: 1 / 1;
             height: 100%;
         }
         .hero_row_2 {
@@ -314,6 +321,10 @@ section#section4 {
     }
 
     .about {
+        > img {
+            aspect-ratio: 1 / 1;
+            height: 100%;
+        }
         .about_content {
             position: relative;
             width: auto;
@@ -337,4 +348,5 @@ section#section4 {
             }
         }
     }
+
 }

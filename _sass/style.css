@@ -349,20 +349,20 @@ html {
 }
 
 h1, h2, label {
-  color: #474747;
+  color: #2c2c2c;
   font-family: "Lora", Cochin, Georgia, Times, serif;
   margin: 0;
   font-weight: 400;
 }
 
 h3, h4 {
-  color: #161616;
+  color: #222222;
   font-family: "Inter", Helvetica, sans-serif;
   margin: 0;
 }
 
 p, a, input, ul, li, button {
-  color: #474747;
+  color: #2c2c2c;
   font-family: "Inter", Helvetica, sans-serif;
   font-size: 2rem;
 }
@@ -381,24 +381,24 @@ h1 {
 }
 
 h2 {
-  color: #111111;
+  color: #141414;
   font-size: 4.8rem;
 }
 
 h3 {
   font-size: 3.6rem;
   font-weight: 600;
-  color: #161616;
+  color: #222222;
 }
 
 h4 {
-  color: #474747;
+  color: #2c2c2c;
   font-size: 2.4rem;
   font-weight: 400;
 }
 
 strong {
-  color: #474747;
+  color: #2c2c2c;
   font-weight: 600;
 }
 
@@ -548,6 +548,9 @@ strong {
   will-change: width;
   animation: dotAppear ease 0.5s;
 }
+.header_container header nav .header_logo a:hover {
+  color: #b45a29 !important;
+}
 @media (min-width: 40em) {
   .header_container header nav .header_logo a::after {
     display: block;
@@ -564,6 +567,9 @@ strong {
 .header_container header nav .header_list li a {
   transition: color 0.25s ease;
 }
+.header_container header nav .header_list li a:hover {
+  color: #b45a29 !important;
+}
 .header_container header nav ion-icon {
   display: none;
 }
@@ -578,12 +584,14 @@ strong {
 .header_container header .social_icons ion-icon {
   font-size: 2rem;
   animation: fadeIn 0.75s ease;
+  transition: color 0.25s ease;
 }
 .header_container header .social_icons #dark {
   display: none;
 }
-.header_container header .social_icons button:hover {
+.header_container header .social_icons ion-icon:hover {
   cursor: pointer;
+  color: #b45a29 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -647,7 +655,6 @@ strong {
   translate: 0 -12.4rem;
 }
 .hero .hero_row_1 .notif_container .notif {
-  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -804,9 +811,11 @@ strong {
   width: 100%;
   padding: 1.6rem;
   border-radius: 0.8rem;
+  transition: scale 0.25s ease;
 }
 .pricing .cards_container .card button:hover {
   cursor: pointer;
+  scale: 0.95;
 }
 .pricing .cards_container > div:nth-child(3) button {
   width: 100%;
@@ -848,6 +857,7 @@ section#section4 {
   width: 100%;
   font-weight: 600;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .faq > div > div .faq-item button ion-icon {
@@ -864,10 +874,14 @@ section#section4 {
   border-top: unset;
 }
 .faq > div > div .expand {
-  max-height: 30rem;
+  max-height: 20rem;
 }
 .faq > div > div .expand button ion-icon {
   transform: rotate(180deg);
+}
+
+#section4 {
+  min-height: calc(100vh - 7.2rem);
 }
 
 .cta {
@@ -909,6 +923,7 @@ section#section4 {
 
 @media screen and (max-width: 768px) {
   .hero .hero_row_1 {
+    aspect-ratio: 1/1;
     height: 100%;
   }
   .hero .hero_row_2 {
@@ -922,6 +937,10 @@ section#section4 {
   }
   .hero .notif_container .notif {
     display: none;
+  }
+  .about > img {
+    aspect-ratio: 1/1;
+    height: 100%;
   }
   .about .about_content {
     position: relative;
@@ -943,36 +962,44 @@ section#section4 {
     padding: 3rem;
   }
 }
+* {
+  transition: color 1s ease, background-color 1s ease, box-shadow 1s ease, filter 1s ease, border 1s ease;
+}
+
+span {
+  color: #b45a29;
+}
+
 h1, h2, label {
-  color: #474747;
+  color: #2c2c2c;
 }
 
 h3, h4 {
-  color: #161616;
+  color: #222222;
 }
 
 p, a, input, ul, li, button {
-  color: #474747;
+  color: #2c2c2c;
 }
 
 h1 {
-  color: #111111;
+  color: #141414;
 }
 
 h2 {
-  color: #161616;
+  color: #222222;
 }
 
 h3 {
-  color: #161616;
+  color: #222222;
 }
 
 h4 {
-  color: #474747;
+  color: #2c2c2c;
 }
 
 strong {
-  color: #474747;
+  color: #2c2c2c;
 }
 
 .header_container header {
@@ -980,10 +1007,10 @@ strong {
   box-shadow: 0px 0px 23px 1px rgba(145, 145, 145, 0.5019607843);
 }
 .header_container header nav .header_logo a::after {
-  background-color: #474747;
+  background-color: #b45a29;
 }
 .header_container header .social_icons ion-icon {
-  color: #474747;
+  color: #2c2c2c;
 }
 
 @media screen and (max-width: 768px) {
@@ -991,10 +1018,10 @@ strong {
     background-color: rgba(255, 255, 255, 0.9019607843);
   }
   .header_container header nav .header_list ion-icon {
-    color: #474747;
+    color: #2c2c2c;
   }
   .header_container header nav ion-icon {
-    color: #474747;
+    color: #2c2c2c;
   }
 }
 section:nth-child(2n+1) {
@@ -1012,11 +1039,11 @@ section:nth-child(2n+1) {
 }
 .hero .hero_row_2 div fieldset input,
 .hero .hero_row_2 form fieldset input {
-  border: #474747 solid 1px;
+  border: #2c2c2c solid 1px;
 }
 .hero .hero_row_2 div fieldset input[value=submit],
 .hero .hero_row_2 form fieldset input[value=submit] {
-  background-color: #161616;
+  background-color: #222222;
   color: #ffffff;
 }
 
@@ -1033,22 +1060,25 @@ section:nth-child(2n+1) {
   background-color: #ffffff;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
+.pricing .cards_container .card span {
+  color: #2c2c2c;
+}
 .pricing .cards_container .card .card_title ion-icon {
-  color: #161616;
+  color: #222222;
 }
 .pricing .cards_container .card button {
   background-color: #f1f1f1;
   border: #858585 solid 1px;
-  color: #111111;
+  color: #141414;
 }
 .pricing .cards_container > div:nth-child(3) {
-  border: #858585 2px solid;
-  box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
+  border: #b45a29 2px solid;
+  box-shadow: 0px 0px 12px 1px rgba(255, 89, 0, 0.3019607843);
 }
 .pricing .cards_container > div:nth-child(3) button {
-  background-color: #161616;
-  color: #f1f1f1;
-  border: #111111 solid 1px;
+  background-color: #b45a29;
+  color: #ffffff;
+  border: #ca8762 solid 1px;
 }
 
 .faq > div > div {
@@ -1056,36 +1086,43 @@ section:nth-child(2n+1) {
 }
 .faq > div > div .faq-item button {
   border-bottom: #c6c6c6 2px solid;
-  color: #111111;
+  color: #141414;
   background-color: #f1f1f1;
+  transition: color 0.25s ease;
 }
 .faq > div > div .faq-item button ion-icon {
-  color: #111111;
+  color: #141414;
+}
+.faq > div > div .faq-item button:hover {
+  color: #b45a29 !important;
+}
+.faq > div > div .faq-item button:hover ion-icon {
+  color: #b45a29 !important;
 }
 
 .cta {
   background-color: #ffffff;
   box-shadow: 0px 0px 12px 1px rgba(145, 145, 145, 0.3019607843);
 }
-.cta label fieldset input {
-  border: #111111 solid 1px;
+.cta fieldset input {
+  border: #141414 solid 1px;
 }
-.cta label fieldset input[value=submit] {
+.cta fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
   background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
-  border-color: #111111;
+  border-color: #141414;
   color: #ffffff;
 }
 
 footer {
-  background-color: #111111;
+  background-color: #141414;
 }
 footer div p {
   color: #858585;
 }
 
 .darkmode {
-  background-color: #161616;
+  background-color: #222222;
 }
 .darkmode h1, .darkmode h2, .darkmode label {
   color: #f1f1f1;
@@ -1112,11 +1149,11 @@ footer div p {
   color: #c6c6c6;
 }
 .darkmode .header_container header {
-  background-color: #111111;
+  background-color: #222222;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .header_container header nav .header_logo a::after {
-  background-color: #ffffff;
+  background-color: #b45a29;
 }
 .darkmode .header_container header .social_icons ion-icon {
   color: #c6c6c6;
@@ -1133,64 +1170,77 @@ footer div p {
   }
 }
 .darkmode section:nth-child(2n+1) {
-  background-color: #111111;
+  background-color: #2c2c2c;
+}
+.darkmode .hero .hero_row_1 video {
+  filter: brightness(0.75);
+}
+.darkmode .hero .hero_row_1 .notif_container .notif {
+  background-color: rgba(44, 44, 44, 0.6);
+  border: 0.25px #222222 solid;
 }
 .darkmode .hero .hero_row_2 div,
 .darkmode .hero .hero_row_2 form {
-  background-color: #111111;
+  background-color: #2c2c2c;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .hero .hero_row_2 div fieldset input,
 .darkmode .hero .hero_row_2 form fieldset input {
-  border: #616161 solid 1px;
+  border: #2c2c2c solid 1px;
 }
 .darkmode .hero .hero_row_2 div fieldset input[value=submit],
 .darkmode .hero .hero_row_2 form fieldset input[value=submit] {
-  background-color: #161616;
+  background-color: #141414;
   color: #ffffff;
 }
+.darkmode .about > img {
+  filter: brightness(0.75);
+}
+.darkmode .about .notif_container .notif {
+  background-color: rgba(44, 44, 44, 0.6);
+  border: 0.25px #222222 solid;
+}
 .darkmode .about .about_content {
-  background-color: #161616;
+  background-color: #222222;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .pricing .cards_container .card {
-  background-color: #111111;
+  background-color: #2c2c2c;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
+}
+.darkmode .pricing .cards_container .card span {
+  color: #d8d8d8;
 }
 .darkmode .pricing .cards_container .card .card_title ion-icon {
   color: #f1f1f1;
 }
 .darkmode .pricing .cards_container .card button {
-  background-color: #161616;
-  border: #474747 solid 1px;
+  background-color: #222222;
+  border: #2c2c2c solid 1px;
   color: #ffffff;
 }
-.darkmode .pricing .cards_container > div:nth-child(3) {
-  border: #474747 2px solid;
-  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
-}
 .darkmode .pricing .cards_container > div:nth-child(3) button {
-  background-color: #f1f1f1;
-  color: #111111;
-  border: #d8d8d8 solid 1px;
+  background-color: #b45a29;
+  color: #ffffff;
+  border: #ca8762 solid 1px;
 }
 .darkmode .faq > div > div {
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .faq > div > div .faq-item button {
-  border-bottom: #474747 2px solid;
-  color: #ffffff;
-  background-color: #161616;
+  border-bottom: #141414 2px solid;
+  color: #f1f1f1;
+  background-color: #222222;
 }
 .darkmode .faq > div > div .faq-item button ion-icon {
-  color: #ffffff;
+  color: #f1f1f1;
 }
 .darkmode .cta {
-  background-color: #111111;
+  background-color: #222222;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3019607843);
 }
 .darkmode .cta fieldset input {
-  border: #474747 solid 1px;
+  border: #2c2c2c solid 1px;
 }
 .darkmode .cta fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
@@ -1198,7 +1248,7 @@ footer div p {
   filter: invert(0.1);
 }
 .darkmode footer {
-  background-color: #161616;
+  background-color: #222222;
 }
 .darkmode footer div p {
   color: #858585;
