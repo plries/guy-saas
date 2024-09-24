@@ -1,9 +1,9 @@
 * {
-    transition: color 1s ease,
-                background-color 1s ease,
-                box-shadow 1s ease,
-                filter 1s ease,
-                border 1s ease;
+    transition: color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease,
+                border 0.25s ease;
 }
 
 span {
@@ -68,9 +68,12 @@ strong {
         header {
             nav {
                 .header_list {
-                    background-color: #ffffffE6;
                     ion-icon {
                         color: $grey-700;
+                    }
+                    li {
+                        background-color: $white;
+                        box-shadow: 0px 0px 23px 1px #91919180;
                     }
                 }
                 ion-icon {
@@ -268,9 +271,12 @@ footer {
             header {
                 nav {
                     .header_list {
-                        background-color: #000000E6;
                         ion-icon {
                             color: $grey-100;
+                        }
+                        li {
+                            background-color: $grey-800;
+                            box-shadow: 0px 0px 12px 1px #0000004D;
                         }
                     }
                     ion-icon {

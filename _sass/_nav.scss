@@ -108,29 +108,36 @@
         header {
             gap: 2.4rem;
             nav {
+                position: relative;
                 .header_list {
+                    text-align: center;
                     position: absolute;
-                    flex-direction: column;
-                    align-items: end;
+                    flex-direction: row;
+                    align-items: center;
                     justify-content: center;
-                    height: 100vh;
-                    top: 0;
-                    right: 0;
-                    width: -webkit-fit-content;
-                    width: -moz-fit-content;
-                    width: fit-content;
+                    width: 100%;
                     padding: 2.4rem;
-                    z-index: 2;
-                    transition: transform 0.25s ease;
-                    transform: translateX(100px);
-                }
+                    z-index: -1;
+                    gap: 0.8rem;
+                    opacity: 0;
+                    transition: transform 0.25s ease,
+                                opacity 0.25s ease;                }
                 ion-icon {
                     margin-top: 0.8rem;
                     display: block;
                     font-size: 2rem;
                 }
+                li {
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 8px;
+                }
                 a::after {
                     visibility: hidden;
+                }
+                .show_menu {
+                    opacity: 1;
+                    transform: translateY(80%);
                 }
             }
             .social_icons {

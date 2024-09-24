@@ -1,15 +1,19 @@
-const openNav = document.querySelector('#open_nav')
-const closeNav = document.querySelector("#close_nav")
+const navIcon = document.querySelector('#nav_icon')
 const nav = document.querySelector('.header_list')
 
-openNav.addEventListener('click', () => {
+navIcon.addEventListener('click', () => {
     
-    nav.style.transform = 'translateX(0px)';
+    nav.classList.toggle('show_menu')
 
-})
+    let icon = navIcon.getAttribute('name')
 
-closeNav.addEventListener('click', () => {
-    
-    nav.style.transform = 'translateX(100px)';
+    if( icon === 'menu-outline' ) {
+
+        navIcon.setAttribute('name', 'close-outline')
+
+    } else {
+        
+        navIcon.setAttribute('name', 'menu-outline')
+    }
 
 })
