@@ -1,6 +1,6 @@
 let toggleoff = document.querySelector('#dark');
 let toggleon = document.querySelector('#light');
-let notifs = document.querySelectorAll('.notif')
+let notifs = document.querySelectorAll('.notif');
 let mode = localStorage.getItem("mode");
 
 function updateMode(mode) {
@@ -11,7 +11,7 @@ if (mode === 'darkmode') {
     document.body.classList.add("darkmode");
     document.body.classList.remove('lightmode');
     notifs[0].src = '../media/hero-notif-dark.png';
-    notifs[1].src = '../media/hero-notif-dark.png';
+    notifs[1].src = '../media/friends-notif-dark.png';
 } else {
     localStorage.setItem('mode', 'lightmode');
     toggleoff.style.display = 'block';
@@ -19,7 +19,7 @@ if (mode === 'darkmode') {
     document.body.classList.remove("darkmode");
     document.body.classList.add('lightmode');
     notifs[0].src = '../media/hero-notif-light.png';
-    notifs[1].src = '../media/hero-notif-light.png';
+    notifs[1].src = '../media/friends-notif-light.png';
 }
 }
 
