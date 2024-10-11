@@ -18,6 +18,8 @@
     
     .col_12_4 {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1.6rem;
+        padding: 1.6rem;
     }
 
     .s1_md {

@@ -72,8 +72,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -173,8 +172,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -moz-appearance: button;
-       appearance: button;
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -258,8 +256,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -moz-appearance: textfield;
-       appearance: textfield;
+  appearance: textfield;
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -332,6 +329,8 @@ template {
 @media screen and (max-width: 768px) {
   .col_12_4 {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    padding: 1.6rem;
   }
   .s1_md {
     grid-column: 1/5;
@@ -419,6 +418,16 @@ strong {
     font-size: 1.6rem;
   }
 }
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -429,7 +438,23 @@ strong {
     transform: translate(0);
   }
 }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dotAppear {
   from {
     opacity: 0;
   }
@@ -445,10 +470,30 @@ strong {
     opacity: 1;
   }
 }
+@-webkit-keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 @keyframes slideRight {
   from {
     opacity: 0;
     transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
   }
   to {
     opacity: 1;
@@ -467,33 +512,40 @@ strong {
 }
 .visible#section1 .hero .notif_container .notif {
   visibility: visible;
+  -webkit-animation: fadeUp 1s ease;
   animation: fadeUp 1s ease;
 }
 .visible#section1 .hero .hero_row_2 {
   visibility: visible;
+  -webkit-animation: slideRight 1s ease;
   animation: slideRight 1s ease;
 }
 
 .visible#section2 .about .notif_container .notif {
   visibility: visible;
+  -webkit-animation: fadeUp 1s ease;
   animation: fadeUp 1s ease;
 }
 .visible#section2 .about .about_content {
   visibility: visible;
+  -webkit-animation: slideLeft 1s ease;
   animation: slideLeft 1s ease;
 }
 
 .visible#section3 .pricing .cards_container .card {
   visibility: visible;
+  -webkit-animation: slideRight 1s ease;
   animation: slideRight 1s ease;
 }
 
 .visible#section4 .faq > div {
   visibility: visible;
+  -webkit-animation: slideLeft 1s ease;
   animation: slideLeft 1s ease;
 }
 .visible#section4 .cta {
   visibility: visible;
+  -webkit-animation: slideRight 1s ease;
   animation: slideRight 1s ease;
 }
 
@@ -546,6 +598,7 @@ strong {
   transform: translateX(calc(var(--markerLeft) + var(--markerWidth) / 2 - 0.2rem));
   transition: transform ease 0.25s;
   will-change: width;
+  -webkit-animation: dotAppear ease 0.5s;
   animation: dotAppear ease 0.5s;
 }
 .header_container header nav .header_logo a:hover {
@@ -583,6 +636,7 @@ strong {
 }
 .header_container header .social_icons ion-icon {
   font-size: 2rem;
+  -webkit-animation: fadeIn 0.75s ease;
   animation: fadeIn 0.75s ease;
   transition: color 0.25s ease;
 }
@@ -645,10 +699,8 @@ strong {
   grid-template-columns: 1fr;
   gap: 3.6rem;
 }
-.hero .hero_row_1 {
-  height: calc(71vh - 7.2rem);
-}
 .hero .hero_row_1 video {
+  aspect-ratio: 26/9;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -668,6 +720,7 @@ strong {
   border-radius: 24px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
   max-width: 400px;
   visibility: hidden;
@@ -715,6 +768,7 @@ strong {
 }
 .hero .hero_row_2 div fieldset input[value=submit],
 .hero .hero_row_2 form fieldset input[value=submit] {
+  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 0 0.8rem 0.8rem 0;
@@ -753,6 +807,7 @@ strong {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 400px;
+  -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
   visibility: hidden;
 }
@@ -842,13 +897,13 @@ section#section4 {
 
 .faq > div {
   visibility: hidden;
-  height: 70%;
+  height: 100%;
   display: grid;
   place-items: center;
   width: 100%;
-  margin: 4.8rem 0;
 }
 .faq > div > div {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 16px;
@@ -896,6 +951,7 @@ section#section4 {
 
 .cta {
   visibility: hidden;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 4rem;
@@ -923,6 +979,7 @@ section#section4 {
   border-radius: 0 0.8rem 0.8rem 0;
   background-position: center;
   background-size: cover;
+  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   max-width: 25%;
@@ -933,11 +990,12 @@ section#section4 {
 
 @media screen and (max-width: 768px) {
   .hero .hero_row_1 {
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     height: 100%;
   }
   .hero .hero_row_2 {
     grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
   .hero .hero_row_2 div {
     padding: 3rem;
@@ -947,6 +1005,9 @@ section#section4 {
   }
   .hero .notif_container .notif {
     display: none;
+  }
+  .about {
+    gap: 1.6rem;
   }
   .about > img {
     aspect-ratio: 1/1;
@@ -967,9 +1028,13 @@ section#section4 {
   }
   .pricing .cards_container {
     grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
   .pricing .cards_container .card {
     padding: 3rem;
+  }
+  .faq .faq-item.expand {
+    max-height: 28rem;
   }
 }
 * {
@@ -1257,6 +1322,7 @@ footer div p {
 .darkmode .cta fieldset input[value=submit] {
   border-radius: 0 0.8rem 0.8rem 0;
   background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  -webkit-filter: invert(0.1);
   filter: invert(0.1);
 }
 .darkmode footer {

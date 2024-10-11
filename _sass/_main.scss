@@ -8,8 +8,8 @@
     grid-template-columns: 1fr;
     gap: 3.6rem;
     .hero_row_1 {
-        height: calc(71vh - 7.2rem);
         video {
+            aspect-ratio: 26 / 9;
             height: 100%;
             width: 100%;
             -o-object-fit: cover;
@@ -204,17 +204,16 @@ section#section4 {
 .faq {
     > div {
         visibility: hidden;
-        height: 70%;
+        height: 100%;
         display: grid;
         place-items: center;
         width: 100%;
-        margin: 4.8rem 0;
         > div {
             height: -webkit-fit-content;
             height: -moz-fit-content;
             height: fit-content;
             border-radius: 16px;
-            overflow: hidden;;
+            overflow: hidden;
             .faq-item {
                 max-height: 6.6rem;
                 overflow: hidden;
@@ -303,11 +302,12 @@ section#section4 {
     
     .hero {
         .hero_row_1 {
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 4 / 3;
             height: 100%;
         }
         .hero_row_2 {
             grid-template-columns: 1fr;
+            gap: 1.6rem;
             div {
                 padding: 3rem;
             }
@@ -321,6 +321,7 @@ section#section4 {
     }
 
     .about {
+        gap: 1.6rem;
         > img {
             aspect-ratio: 1 / 1;
             height: 100%;
@@ -343,9 +344,16 @@ section#section4 {
     .pricing {
         .cards_container {
             grid-template-columns: 1fr;
+            gap: 1.6rem;
             .card {
                 padding: 3rem;
             }
+        }
+    }
+
+    .faq {
+        .faq-item.expand {
+            max-height: 28rem;
         }
     }
 
