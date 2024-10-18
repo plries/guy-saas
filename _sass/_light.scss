@@ -1,0 +1,211 @@
+* {
+    transition: color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease,
+                border 0.25s ease;
+}
+
+span {
+    color: #b45a29;
+}
+
+h1, h2, label {
+    color: $grey-700;
+}
+
+h3, h4 {
+    color: $grey-800;
+}
+
+p, a, input, ul, li, button {
+    color: $grey-700;
+}
+
+h1 {
+    color: $grey-900;
+}
+
+h2 {
+    color: $grey-800;
+}
+
+h3 {
+    color: $grey-800;
+}
+
+h4 {
+    color: $grey-700;
+}
+
+strong {
+    color: $grey-700;
+}
+
+.header_container {
+    header {
+        background-color: $white;
+        box-shadow: 0px 0px 23px 1px #91919180;
+        nav {
+            .header_logo {
+                a::after {
+                    background-color: $orange-200;
+                }
+            }
+        }
+        .social_icons {
+            ion-icon {
+                color: $grey-700;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+        
+    .header_container {
+        header {
+            nav {
+                .header_list {
+                    ion-icon {
+                        color: $grey-700;
+                    }
+                    li {
+                        background-color: $white;
+                        box-shadow: 0px 0px 23px 1px #91919180;
+                    }
+                }
+                ion-icon {
+                    color: $grey-700;
+                }
+            }
+        }
+    }
+
+}
+
+section:nth-child(2n + 1) {
+    background-color: $white;
+}
+
+.hero {
+    .hero_row_1 {
+        .notif_container {
+            .notif {
+                background-color: #ffffff99;
+                border: 0.25px $grey-100 solid;
+            }
+        }
+    }
+    .hero_row_2 {
+        div,
+        form {
+            background-color: $white;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            fieldset {
+                input {
+                    border: $grey-700 solid 1px;
+                }
+                input[value="submit"] {
+                    background-color: $grey-800;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.about {
+    .notif_container {
+        .notif {
+            background-color: #ffffff99;
+            border: 0.25px $grey-100 solid;
+        }
+    }
+    .about_content {
+        background-color: $white;
+        box-shadow: 0px 0px 12px 1px #9191914D;
+    }
+}
+
+.pricing {
+    .cards_container {
+        .card {
+            background-color: $white;
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            span {
+                color: $grey-700;
+            }
+            .card_title {
+                ion-icon {
+                    color: $grey-800;
+                }
+            }
+            button {
+                background-color: $grey-100;
+                border: $grey-500 solid 1px;
+                color: $grey-900;
+            }
+        }
+        > div:nth-child(3) {
+            border: $orange-200 2px solid;
+            box-shadow: 0px 0px 12px 1px #ff59004d;
+            button {
+                background-color: $orange-200;
+                color: $white;
+                border: $orange-100 solid 1px;
+            }
+        }
+    }
+}
+
+.faq {
+    > div {
+        > div {
+            box-shadow: 0px 0px 12px 1px #9191914D;
+            .faq-item {
+                button {
+                    border-bottom: $grey-300 2px solid;
+                    color: $grey-900;
+                    background-color: $grey-100;
+                    transition: color 0.25s ease;
+                    ion-icon {
+                        color: $grey-900;
+                    }
+                }
+                button:hover {
+                    color: $orange-200 !important;
+                    ion-icon {
+                        color: $orange-200 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cta {
+    background-color: $white;
+    box-shadow: 0px 0px 12px 1px #9191914D;
+    fieldset {
+        input {
+            border: $grey-900 solid 1px;
+        }
+        input[value="submit"] {
+            border-radius: 0 0.8rem 0.8rem 0;
+            background: url(https://media.giphy.com/media/lzJAy8UfMFTUimijYD/giphy.gif?cid=ecf05e47zrbhont4kun4yjkzgnz00rmkqs85kc2atyfrtsuk&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+            border-color: $grey-900;
+            color: $white;
+        }
+    }
+}
+
+footer {
+    background-color: $grey-900;
+    div {
+        p {
+            color: $grey-500;
+        }
+    }
+}
