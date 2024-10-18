@@ -783,6 +783,25 @@ strong {
   gap: 1.6rem;
 }
 
+@media screen and (max-width: 768px) {
+  .hero .hero_row_1 {
+    aspect-ratio: 4/3;
+    height: 100%;
+  }
+  .hero .hero_row_2 {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .hero .hero_row_2 div {
+    padding: 3rem;
+  }
+  .hero .notif_container {
+    display: none;
+  }
+  .hero .notif_container .notif {
+    display: none;
+  }
+}
 .about {
   display: grid;
   gap: 3.6rem;
@@ -829,6 +848,28 @@ strong {
   margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .about {
+    gap: 1.6rem;
+  }
+  .about > img {
+    aspect-ratio: 1/1;
+    height: 100%;
+  }
+  .about .about_content {
+    position: relative;
+    width: auto;
+    margin: auto;
+    padding: 3rem;
+    left: unset;
+  }
+  .about .notif_container {
+    display: none;
+  }
+  .about .notif_container .notif {
+    display: none;
+  }
+}
 .pricing {
   min-height: calc(100vh - 7.2rem);
 }
@@ -836,8 +877,8 @@ strong {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.6rem;
-  height: 80%;
   width: 100%;
+  height: 100%;
 }
 .pricing .cards_container .card {
   visibility: hidden;
@@ -891,10 +932,25 @@ strong {
   display: none;
 }
 
-section#section4 {
-  display: grid;
+@media screen and (max-width: 1024px) {
+  .pricing .cards_container {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .pricing .cards_container .card {
+    padding: 3rem;
+  }
+}
+#section4 {
+  min-height: calc(100vh - 7.2rem);
+}
+#section4 div:first-child {
+  height: fit-content;
 }
 
+.faq {
+  height: fit-content;
+}
 .faq > div {
   visibility: hidden;
   height: 100%;
@@ -945,10 +1001,6 @@ section#section4 {
   transform: rotate(180deg);
 }
 
-#section4 {
-  min-height: calc(100vh - 7.2rem);
-}
-
 .cta {
   visibility: hidden;
   height: -webkit-fit-content;
@@ -989,50 +1041,6 @@ section#section4 {
 }
 
 @media screen and (max-width: 768px) {
-  .hero .hero_row_1 {
-    aspect-ratio: 4/3;
-    height: 100%;
-  }
-  .hero .hero_row_2 {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
-  .hero .hero_row_2 div {
-    padding: 3rem;
-  }
-  .hero .notif_container {
-    display: none;
-  }
-  .hero .notif_container .notif {
-    display: none;
-  }
-  .about {
-    gap: 1.6rem;
-  }
-  .about > img {
-    aspect-ratio: 1/1;
-    height: 100%;
-  }
-  .about .about_content {
-    position: relative;
-    width: auto;
-    margin: auto;
-    padding: 3rem;
-    left: unset;
-  }
-  .about .notif_container {
-    display: none;
-  }
-  .about .notif_container .notif {
-    display: none;
-  }
-  .pricing .cards_container {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
-  .pricing .cards_container .card {
-    padding: 3rem;
-  }
   .faq .faq-item.expand {
     max-height: 28rem;
   }

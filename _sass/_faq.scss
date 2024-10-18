@@ -1,0 +1,111 @@
+#section4 {
+    min-height: calc(100vh - 7.2rem);
+
+    div:first-child {
+        height: fit-content;
+    }
+}
+
+.faq {
+    height: fit-content;
+    > div {
+        visibility: hidden;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        > div {
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            border-radius: 16px;
+            overflow: hidden;
+            .faq-item {
+                max-height: 6.6rem;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+                width: 100%;
+                button {
+                    text-align: left;
+                    border: 0;
+                    padding: 2rem;
+                    width: 100%;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    ion-icon {
+                        font-size: 2.4rem;
+                        transition: transform 0.5s ease;
+                        min-width: 2.4rem;
+                    }
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+                .faq-content {
+                    padding: 1.6rem;
+                    border: 0;
+                    border-top: unset;
+                }
+            }
+            .expand {
+                max-height: 20rem;
+                button {
+                    ion-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cta {
+    visibility: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+    fieldset {
+        display: flex;
+        border: 0;
+        padding: 0;
+        input {
+            border-radius: 0.8rem 0 0 0.8rem;
+            padding: 1.6rem;
+            width: 100%;
+        }
+        input[value="submit"] {
+            border-radius: 0 0.8rem 0.8rem 0;
+            background-position: center;
+            background-size: cover;
+            min-width: -webkit-fit-content;
+            min-width: -moz-fit-content;
+            min-width: fit-content;
+            max-width: 25%;
+        }
+        input[value="submit"]:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .faq {
+        .faq-item.expand {
+            max-height: 28rem;
+        }
+    }
+    
+}
