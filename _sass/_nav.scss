@@ -34,7 +34,7 @@
                     transition: color 0.25s ease;
                 }
                 a::after {
-                    display: none;
+                    display: block;
                     content: '';
                     position: absolute;
                     left: 0;
@@ -50,11 +50,6 @@
                 }
                 a:hover {
                     color: $orange-200 !important;
-                }
-                @media (min-width: 40em) {
-                    a::after {
-                        display: block;
-                    }
                 }
             }
             .header_list {
