@@ -587,7 +587,7 @@ strong {
   transition: color 0.25s ease;
 }
 .header_container header nav .header_logo a::after {
-  display: none;
+  display: block;
   content: "";
   position: absolute;
   left: 0;
@@ -603,11 +603,6 @@ strong {
 }
 .header_container header nav .header_logo a:hover {
   color: #b45a29 !important;
-}
-@media (min-width: 40em) {
-  .header_container header nav .header_logo a::after {
-    display: block;
-  }
 }
 .header_container header nav .header_list {
   display: flex;
